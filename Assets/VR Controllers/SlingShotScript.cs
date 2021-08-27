@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Collision : MonoBehaviour
+public class SlingShotScript : MonoBehaviour
 {
 
     public GameObject front;
@@ -70,13 +70,13 @@ public class Collision : MonoBehaviour
     {
         if (isPulling && !canPull) //!canPull in case the user wants to cancel the shot
         {
-            Debug.Log("Shoot");
+            //Debug.Log("Shoot");
             shoot();
             isPulling = false;
         }
         else
         {
-            Debug.Log("Cancled Shot");
+            //Debug.Log("Cancled Shot");
             isPulling = false;
         }
     }
@@ -85,7 +85,7 @@ public class Collision : MonoBehaviour
     {
         if (canPull)
         {
-            Debug.Log("Start pull");
+            //Debug.Log("Start pull");
             isPulling = true;
         }
     }
