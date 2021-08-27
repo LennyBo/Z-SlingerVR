@@ -26,6 +26,9 @@ public class DontGoThroughThings : MonoBehaviour
 		minimumExtent = Mathf.Min(Mathf.Min(myCollider.bounds.extents.x, myCollider.bounds.extents.y), myCollider.bounds.extents.z);
 		partialExtent = minimumExtent * (1.0f - skinWidth);
 		sqrMinimumExtent = minimumExtent * minimumExtent;
+
+		Vector3 dir = transform.rotation.eulerAngles.normalized;
+
 	}
 
 	void FixedUpdate()
