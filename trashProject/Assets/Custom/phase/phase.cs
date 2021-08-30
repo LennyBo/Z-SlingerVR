@@ -7,10 +7,12 @@ public class phase : MonoBehaviour
 {
     public scr_spawner[] spawner;
 
+    private uint wave_counter = 0;
+    [SerializeField] private uint zombies_per_wave;
 
     private bool isPhase1 = false;
     private List<Object> wave;
-    public Text textElement;
+    [SerializeField] private Text textElement;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +36,7 @@ public class phase : MonoBehaviour
     {
         Debug.Log("=== PHASE 1 ===");
         isPhase1 = true;
+        ++wave_counter;
 
         textElement.text = "Pressez f pour valider";
     }
@@ -45,9 +48,17 @@ public class phase : MonoBehaviour
         
         textElement.text = "Éliminez tous les zombies !";
         this.Invoke("aFunctionBecauseLambdasDontWork", 2.5f);
-        foreach (var s in spawner)
-            foreach (var o in s.spawn((uint)Random.Range(3, 10)))
+        uint min = (uint)(zombies_per_wave * wave_counter*0.7f);
+        uint max = (uint)(zombies_per_wave * wave_counter*1.5f);
+        Debug.Log("min, max " + min + " " + max);
+        foreach (var s in spawner) {
+            int i = 0;
+            foreach (var o in s.spawn((uint)Random.Range(min, max))) {
                 wave.Add(o);
+                Debug.Log(++i);
+            }
+            Debug.Log("----");
+        }
     }
 
     private void aFunctionBecauseLambdasDontWork()
