@@ -5,8 +5,9 @@ using UnityEngine;
 public class zombie_collision : MonoBehaviour
 {
     public GameObject me;
-    public float pv = 10;
-    public float timeBeforeDespawn = 21f;
+    public float pv;
+    public float timeBeforeDespawn;
+    public pathfinding path;
 
     private Animator m_animator;
     
@@ -25,8 +26,10 @@ public class zombie_collision : MonoBehaviour
         
         if ((pv -= dmg) <= 0)
         {
+            path.stop();
             m_animator.SetTrigger("Death");
             Destroy(me, timeBeforeDespawn);
+            Debug.Log("It will die in " + timeBeforeDespawn);
         }
     }
 }

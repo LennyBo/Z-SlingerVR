@@ -12,9 +12,7 @@ public class pathfinding : MonoBehaviour
     private NavMeshAgent nav;
     private int destPoint;
 
-    // because I can't GetComponent<GameObject>(); // (return null);
-    public GameObject gameObject;
-    static private float deathTime = 5f;
+    static private float deathTime = 10f;
     
     private Animator m_animator;
     private bool finisedWalking = false;
@@ -48,6 +46,12 @@ public class pathfinding : MonoBehaviour
         }
 
         CheckIfDestinationReached();
+    }
+
+    public void stop()
+    {
+        nav.isStopped = true;
+        Debug.Log("STOP");
     }
 
     private bool CheckIfDestinationReached()

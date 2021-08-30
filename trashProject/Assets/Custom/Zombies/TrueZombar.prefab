@@ -1383,8 +1383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: []
-  gameObject: {fileID: 8586512193925254606}
-  cam: {fileID: 0}
+  cam: {fileID: 1656776608569440368, guid: c53c27e0fbe80004c92b76c5a1f53c97, type: 3}
 --- !u!114 &-5810365098095025514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1399,6 +1398,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   me: {fileID: 8586512193925254606}
   pv: 10
+  timeBeforeDespawn: 10
+  path: {fileID: 8586512193925254604}
 --- !u!1 &8586512193979735377
 GameObject:
   m_ObjectHideFlags: 0

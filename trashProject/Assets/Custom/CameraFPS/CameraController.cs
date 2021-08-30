@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    private Transform camera;
+    private Transform me;
     // Start is called before the first frame update
     void Start()
     {
-        camera = GetComponent<Transform>();
+        me = GetComponent<Transform>();
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -30,9 +30,9 @@ public class CameraController : MonoBehaviour
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
         
-        camera.Rotate(Vector3.up * mouseX);
-        camera.Rotate(Vector3.right * -mouseY);
-        camera.Rotate(Vector3.forward * tilt);
-        camera.Translate(vec * Time.deltaTime);
+        me.Rotate(Vector3.up * mouseX);
+        me.Rotate(Vector3.right * -mouseY);
+        me.Rotate(Vector3.forward * tilt);
+        me.Translate(vec * Time.deltaTime);
     }
 }
