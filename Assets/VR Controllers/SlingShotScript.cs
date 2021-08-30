@@ -11,8 +11,10 @@ public class SlingShotScript : MonoBehaviour
     public Material farMaterial;
     public GameObject bullet;
     public InputActionReference pullAction;
+    public InputActionReference pullToggle;
     public float lineWidth = 0.012f;
     public int forceMultplier = 1000;
+
 
     private bool _canPull;
     private bool _isPulling;
@@ -63,8 +65,20 @@ public class SlingShotScript : MonoBehaviour
         lineRenderer = GetComponent<LineRenderer>();
         pullAction.action.started += Action_started;
         pullAction.action.canceled += Action_canceled;
+        if(pullToggle != null)
+        {
+            pullToggle.action.started += Action_started1;
+        }
     }
 
+    private void Action_started1(InputAction.CallbackContext obj)
+    {
+        if (canPull)
+        {
+            //Debug.Log("Start pull");
+            isPulling = true;
+        }
+    }
 
     private void Action_canceled(InputAction.CallbackContext obj)
     {

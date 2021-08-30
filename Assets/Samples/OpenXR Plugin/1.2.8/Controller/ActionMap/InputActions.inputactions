@@ -455,6 +455,17 @@
                 },
                 {
                     "name": "",
+                    "id": "c480e82a-2ebe-403f-b901-83e24ad43bcf",
+                    "path": "<Keyboard>/ctrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Trigger",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "d09e2fdd-08b3-42eb-86c8-5c3a8f4a03c5",
                     "path": "<XRController>{RightHand}/{primaryButton}",
                     "interactions": "",
@@ -715,6 +726,33 @@
                     "processors": "",
                     "groups": "",
                     "action": "pointerRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "KeyBoard",
+            "id": "744e7232-6997-48bd-92d6-e042d3ca655f",
+            "actions": [
+                {
+                    "name": "KeyA",
+                    "type": "Button",
+                    "id": "4ece339c-066b-416b-9c2e-9eb35e8abe25",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "428df56c-b461-48da-8322-390f4e3742a8",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KeyA",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
