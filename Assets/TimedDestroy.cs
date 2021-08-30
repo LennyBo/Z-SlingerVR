@@ -7,6 +7,8 @@ public class TimedDestroy : MonoBehaviour
     public int time = 4;
 
 
+
+
     private float remainingTime;
     // Start is called before the first frame update
     void Start()
@@ -18,5 +20,11 @@ public class TimedDestroy : MonoBehaviour
     void Update()
     {
 
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        float dmg = collision.relativeVelocity.magnitude;
+        Debug.Log("hey! I hit for " + dmg + " damages (magnitude)");
     }
 }
