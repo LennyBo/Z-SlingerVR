@@ -6,19 +6,25 @@ public class BulletShooter : MonoBehaviour
 {
 
     public GameObject bulletPrefab;
+    public float shootForce = 20000f;
+    public float timePerShot;
+
+    private float timeSinceLastShot = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log(timePerShot);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("Fire1") > 0.9f)
+        timeSinceLastShot += Time.deltaTime;
+        if (Input.GetAxis("Fire1") > 0.9f && timeSinceLastShot > timePerShot)
         {
-            Vector3 bulletSpawnPos = transform.position + (transform.rotation.eulerAngles).normalized;
-            Instantiate(bulletPrefab, bulletSpawnPos, new Quaternion());
+            timeSinceLastShot = 0;
+            GameObject g = Instantiate(bulletPrefab, transform.position + transform.forward * 1, transform.rotation);
+            g.GetComponent<Rigidbody>().AddForce(transform.position + transform.forward * 1* shootForce);
         }
     }
 }

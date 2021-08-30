@@ -24,7 +24,7 @@ public class TimedDestroy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        float dmg = collision.relativeVelocity.magnitude;
-        Debug.Log("hey! I hit for " + dmg + " damages (magnitude)");
+        //float dmg = collision.relativeVelocity.magnitude;
+        //Debug.Log("hey! I hit for " + dmg + " damages (magnitude)");
     }
 }
