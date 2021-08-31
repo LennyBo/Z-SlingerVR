@@ -140,11 +140,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 975963797829052185, guid: 667485f9f768cca41949562d722ce9af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.274
+      value: 1.056
       objectReference: {fileID: 0}
     - target: {fileID: 975963797829052185, guid: 667485f9f768cca41949562d722ce9af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.832
+      value: -0.543
       objectReference: {fileID: 0}
     - target: {fileID: 975963797829052185, guid: 667485f9f768cca41949562d722ce9af, type: 3}
       propertyPath: m_LocalRotation.w
@@ -859,29 +859,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6885970316725224066, guid: dd653da9e37420a468ad9b3017ea068d, type: 3}
-      propertyPath: m_MaxRaycastDistance
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6885970316725224066, guid: dd653da9e37420a468ad9b3017ea068d, type: 3}
-      propertyPath: m_SelectActionTrigger
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6885970317260004495, guid: dd653da9e37420a468ad9b3017ea068d, type: 3}
       propertyPath: actionReference
       value: 
       objectReference: {fileID: 3873870584620388549, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
-    - target: {fileID: 6885970317366078993, guid: dd653da9e37420a468ad9b3017ea068d, type: 3}
-      propertyPath: m_InteractionManager
-      value: 
-      objectReference: {fileID: 718215149}
-    - target: {fileID: 6885970317366078993, guid: dd653da9e37420a468ad9b3017ea068d, type: 3}
-      propertyPath: m_MaxRaycastDistance
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6885970317902497906, guid: dd653da9e37420a468ad9b3017ea068d, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6885970317902497906, guid: dd653da9e37420a468ad9b3017ea068d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -927,8 +911,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Rig
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6885970317366078993, guid: dd653da9e37420a468ad9b3017ea068d, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd653da9e37420a468ad9b3017ea068d, type: 3}
 --- !u!4 &1606531169 stripped
 Transform:
@@ -960,7 +943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3474313321062443708, guid: c162cfe37890bc244a507936642c2b7e, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3474313321062443708, guid: c162cfe37890bc244a507936642c2b7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1022,3 +1005,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactor: {fileID: 941381242}
+  delay: 1

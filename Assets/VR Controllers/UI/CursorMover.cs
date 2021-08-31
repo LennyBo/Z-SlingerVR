@@ -15,12 +15,15 @@ public class CursorMover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        tempVector = Vector3.zero;
     }
 
     // Update is called once per frame
     void Update()
     {
         GetComponent<RectTransform>().localPosition = Quaternion.AngleAxis(45, Vector3.forward)  * actionReference.action.ReadValue<Vector2>() * 400;
+        /*tempVector.y += Input.GetAxis("Vertical") * Time.deltaTime;
+        tempVector.x += Input.GetAxis("Horizontal") * Time.deltaTime;
+        GetComponent<RectTransform>().localPosition = Quaternion.AngleAxis(45, Vector3.forward) * tempVector*400;*/
     }
 }

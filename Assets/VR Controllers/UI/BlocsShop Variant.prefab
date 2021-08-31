@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &2301135761785082223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601677116043739103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404aa51d311637f48886ef546955e6db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloc: {fileID: 975963797829052191, guid: 667485f9f768cca41949562d722ce9af, type: 3}
+  price: 10
 --- !u!114 &6849984289817472346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,7 +104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5940742888245773138, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: BuyButton
       objectReference: {fileID: 0}
     - target: {fileID: 6706039583601504163, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
       propertyPath: m_Pivot.x
@@ -194,7 +208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8455693543383887744, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: BuyButton
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1870144851, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
@@ -205,6 +219,11 @@ PrefabInstance:
 --- !u!1 &1013160859643034925 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8290641149411683698, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
+  m_PrefabInstance: {fileID: 9007549294805340255}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &601677116043739103 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8455693543383887744, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
   m_PrefabInstance: {fileID: 9007549294805340255}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &3418509683961063755 stripped

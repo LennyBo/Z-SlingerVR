@@ -46,6 +46,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 228846538701482990, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 75c19c4b3ef7ea74a90273282881ba62, type: 3}
+    - target: {fileID: 228846538701482990, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 228846538701482990, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 228846538701482990, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2595319006047340348, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 92b8431de4661e94b9a1b5b994ec1999, type: 3}
+    - target: {fileID: 2595319006047340348, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2595319006047340348, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2595319006047340348, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2595319006841732474, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b15c0a02936ab3048a600f2cee248daa, type: 3}
+    - target: {fileID: 2595319006841732474, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2595319006841732474, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2595319006841732474, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4739267911250758102, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
       propertyPath: m_Text
       value: Blocs

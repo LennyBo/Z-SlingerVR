@@ -34,7 +34,10 @@ public class CursorCollision : MonoBehaviour
             }
             else if (currentButton.tag == "BuyButton")
             {
-                //currentButton.GetComponent<navigationScript>().pressed();
+                if(currentButton.GetComponent<spawnBloc>().tryBuy())
+                {
+
+                }
             }
         }
         else if (lockSwitch && actionReference.action.ReadValue<float>() < 0.9f)

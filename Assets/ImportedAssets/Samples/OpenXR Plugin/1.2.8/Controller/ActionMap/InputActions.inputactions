@@ -532,6 +532,17 @@
                 },
                 {
                     "name": "",
+                    "id": "16a159f6-c65e-4366-b3e3-82f4a70e07d4",
+                    "path": "<Mouse>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Primary2DAxisClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "62761c89-0d6d-40f1-ae88-88fa58d7ff02",
                     "path": "<XRController>{RightHand}/{primary2DAxisTouch}",
                     "interactions": "",
