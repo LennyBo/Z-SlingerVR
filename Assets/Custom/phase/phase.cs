@@ -12,7 +12,9 @@ public class phase : MonoBehaviour
 
     private bool isPhase1 = false;
     private List<Object> wave;
-    [SerializeField] private Text textElement;
+    [SerializeField] private Text textPhase;
+    [SerializeField] private Text textDescription;
+    [SerializeField] private Text textTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -32,13 +34,31 @@ public class phase : MonoBehaviour
         }
     }
 
+
+    private string getStringTime()
+    {
+        if (prepaTime < 0)
+            return "-1";
+        string ret = "";
+        while(prepaTime > 60) {
+            ret += "60:";
+        }
+        ret += Mathf.Ceil(prepaTime).ToString();
+
+        return ret;
+    }
+
+    [SerializeField] private static float PREPATIME = 10;
+    private float prepaTime = PREPATIME;
     void Phase1()
     {
         Debug.Log("=== PHASE 1 ===");
         isPhase1 = true;
         ++wave_counter;
 
-        textElement.text = "Pressez f pour valider";
+        textPhase.text = "Phase 1";
+        textDescription.text = "Pressez f pour valider, début dans";
+        textTimer.text = getStringTime();
     }
 
     void Phase2()
@@ -46,7 +66,12 @@ public class phase : MonoBehaviour
         Debug.Log("=== PHASE 2 ===");
         isPhase1 = false;
         
-        textElement.text = "Éliminez tous les zombies !";
+        textPhase.text = "Phase 2";
+        textDescription.text = "Éliminez tous les zombies !";
+        textTimer.text = "";
+
+        prepaTime = PREPATIME;
+
         this.Invoke("aFunctionBecauseLambdasDontWork", 2.5f);
         uint min = (uint)(zombies_per_wave * wave_counter*0.7f);
         uint max = (uint)(zombies_per_wave * wave_counter*1.5f);
@@ -63,7 +88,7 @@ public class phase : MonoBehaviour
 
     private void aFunctionBecauseLambdasDontWork()
     {
-        textElement.text = "";
+        textDescription.text = "";
     }
 
     private void d(float f) {
@@ -88,9 +113,12 @@ public class phase : MonoBehaviour
 
     void waitForValidation()
     {
+        prepaTime -= Time.deltaTime;
+        textTimer.text = getStringTime();
+
         float f = Input.GetAxis("Interaction");
         //Debug.Log("f is " + f);
-        if (f != 0)
+        if (f != 0 || prepaTime <= 0)
         {
             Phase2();
         }

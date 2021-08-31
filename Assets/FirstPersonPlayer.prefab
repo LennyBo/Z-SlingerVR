@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4576875115705753029}
   - component: {fileID: 4576875115705753024}
   - component: {fileID: 4576875115705753031}
-  - component: {fileID: 4576875115705753030}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -84,20 +83,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4576875115705753028}
   m_Enabled: 1
---- !u!114 &4576875115705753030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4576875115705753028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf82fe10de706c94e82a10c00eb6f204, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseSens: 100
-  playerBody: {fileID: 4576875117094655389}
 --- !u!1 &4576875117094655379
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,6 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4576875117094655389}
   - component: {fileID: 4576875117094655388}
+  - component: {fileID: 274679658241374459}
   m_Layer: 0
   m_Name: FirstPersonPlayer
   m_TagString: Untagged
@@ -148,3 +134,23 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &274679658241374459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4576875117094655379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf82fe10de706c94e82a10c00eb6f204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minX: -60
+  maxX: 60
+  sensitivity: 1
+  cam: {fileID: 4576875115705753024}
+  walkSpeed: 6
+  jumpSpeed: 8
+  runSpeed: 8
+  gravity: 20
