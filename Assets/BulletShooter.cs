@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +13,7 @@ public class BulletShooter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(timePerShot);
+        //Debug.Log(timePerShot);
     }
 
     // Update is called once per frame
