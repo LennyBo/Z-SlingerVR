@@ -133,7 +133,7 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
         zombie.transform.position += new Vector3(0, -0.2f, 0);
         //Quaternion target = Quaternion.Euler(-10f, 0, 0);
         //zombie.transform.localRotation = Quaternion.Slerp(zombie.transform.localRotation, target, 1);
-        //Destroy(gameObject, timeBeforeDespawn);
+        Destroy(gameObject, timeBeforeDespawn);
     }
 
     

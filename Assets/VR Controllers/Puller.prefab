@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: -5230366525459190560}
   - component: {fileID: 881845045592272095}
   - component: {fileID: -7152710055914534820}
+  - component: {fileID: 6885970318716921986}
   m_Layer: 0
-  m_Name: HandPresence
+  m_Name: Puller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,3 +113,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6885970318716921986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4932056713851141336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c61e24d7fb0e8b40b3237f4cd5600b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fronts: []
+  stonePrefab: {fileID: 0}
+  closeMaterial: {fileID: 2100000, guid: bde4ad42242cb204baad9dff89bb19f0, type: 2}
+  farMaterial: {fileID: 2100000, guid: 50d5de75b757a7c4ab2f726ca5ee88c1, type: 2}
+  bullet: {fileID: 7274804591111829965, guid: 87c5edc7aaa3c0945ae6fde146b43a0a, type: 3}
+  pullAction: {fileID: -5684558904543120851, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
+  pullToggle: {fileID: 0}
+  lineWidth: 0.012
+  forceMultplier: 20000

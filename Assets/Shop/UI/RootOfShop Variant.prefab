@@ -216,7 +216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7416348154853254404, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
       propertyPath: m_Text
-      value: "Lance-pir\xE8rre"
+      value: Lance-pierre
       objectReference: {fileID: 0}
     - target: {fileID: 8290641149411683698, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
       propertyPath: m_Name

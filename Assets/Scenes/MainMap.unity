@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &38957455 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 652402601776507019, guid: dd653da9e37420a468ad9b3017ea068d, type: 3}
+  m_PrefabInstance: {fileID: 1565884841}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &159509301 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3407942656522871966, guid: 6e7d9f21d289a1e4190219441ae84575, type: 3}
@@ -1094,13 +1099,33 @@ PrefabInstance:
       propertyPath: m_MoveSpeed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1579817611, guid: dd653da9e37420a468ad9b3017ea068d, type: 3}
+      propertyPath: m_GravityApplicationMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 652402601776507019, guid: dd653da9e37420a468ad9b3017ea068d, type: 3}
+      propertyPath: m_Name
+      value: Stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354472727890622132, guid: dd653da9e37420a468ad9b3017ea068d, type: 3}
+      propertyPath: stonePrefab
+      value: 
+      objectReference: {fileID: 7287286924837385813, guid: 35d73c0afeb7beb4aa1c8b96b4053c34, type: 3}
+    - target: {fileID: 6354472727890622132, guid: dd653da9e37420a468ad9b3017ea068d, type: 3}
+      propertyPath: fronts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6354472727890622132, guid: dd653da9e37420a468ad9b3017ea068d, type: 3}
+      propertyPath: fronts.Array.data[0]
+      value: 
+      objectReference: {fileID: 38957455}
     - target: {fileID: 6885970316725224066, guid: dd653da9e37420a468ad9b3017ea068d, type: 3}
       propertyPath: m_MaxRaycastDistance
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6885970316725224066, guid: dd653da9e37420a468ad9b3017ea068d, type: 3}
       propertyPath: m_SelectActionTrigger
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6885970317260004495, guid: dd653da9e37420a468ad9b3017ea068d, type: 3}
       propertyPath: actionReference
@@ -1166,6 +1191,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6885970318716921986, guid: dd653da9e37420a468ad9b3017ea068d, type: 3}
+      propertyPath: stonePrefab
+      value: 
+      objectReference: {fileID: 4932056713851141336, guid: 1f04893f0b647854fa27de89db778483, type: 3}
+    - target: {fileID: 6885970318716921986, guid: dd653da9e37420a468ad9b3017ea068d, type: 3}
+      propertyPath: fronts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885970318716921986, guid: dd653da9e37420a468ad9b3017ea068d, type: 3}
+      propertyPath: fronts.Array.data[0]
+      value: 
+      objectReference: {fileID: 38957455}
     m_RemovedComponents:
     - {fileID: 6885970317366078993, guid: dd653da9e37420a468ad9b3017ea068d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dd653da9e37420a468ad9b3017ea068d, type: 3}

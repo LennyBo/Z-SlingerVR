@@ -5,8 +5,9 @@ using UnityEngine;
 public class TimedDestroy : MonoBehaviour
 {
     public int time = 4;
+    public string ennemyTag;
     private Collider playerCollider;
-
+    private bool didHitSomething = false;
 
 
     private float remainingTime;
@@ -26,7 +27,10 @@ public class TimedDestroy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        //float dmg = collision.relativeVelocity.magnitude;
-        //Debug.Log("hey! I hit for " + dmg + " damages (magnitude)");
+        if (didHitSomething || collision.gameObject.tag != ennemyTag)
+            return;
+
+        didHitSomething = true;
+        GetComponent<AudioSource>().Play();
     }
 }
