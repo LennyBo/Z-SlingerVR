@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 8586512193925254601}
   - component: {fileID: 8586512193925254603}
   - component: {fileID: 2896795869661025822}
-  - component: {fileID: 8586512193925254604}
-  - component: {fileID: -5810365098095025514}
+  - component: {fileID: -2292448820810945752}
   m_Layer: 10
   m_Name: TrueZombar
   m_TagString: zombie
@@ -28,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8586512193925254606}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.259035, y: 1.02, z: 15.42}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1009688968488666252}
@@ -67,11 +66,11 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2.74
+  m_Radius: 0.24
+  m_Height: 2.01
   m_Direction: 1
-  m_Center: {x: 0, y: 0.87, z: 0}
---- !u!114 &8586512193925254604
+  m_Center: {x: 0, y: 0.79, z: 0.03}
+--- !u!114 &-2292448820810945752
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,22 +84,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points:
   - {fileID: 5086547096981480404, guid: 2ac764df2d13142459a06eea28ba9e6f, type: 3}
-  camGO: {fileID: 1878467067136047257, guid: b7418681d7ca8a74aa74f43f6fff3e48, type: 3}
---- !u!114 &-5810365098095025514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8586512193925254606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98f5bc50d7492434c933e11a4aced14f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   pv: 10
-  timeBeforeDespawn: 10
-  path: {fileID: 8586512193925254604}
 --- !u!1001 &1009688968488541816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -122,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400116, guid: 54b9b03c990254f46bb17c573be0774c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.15
       objectReference: {fileID: 0}
     - target: {fileID: 400116, guid: 54b9b03c990254f46bb17c573be0774c, type: 3}
       propertyPath: m_LocalPosition.z

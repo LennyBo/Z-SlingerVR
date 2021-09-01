@@ -75,24 +75,20 @@ public class phase : MonoBehaviour
         this.Invoke("aFunctionBecauseLambdasDontWork", 2.5f);
         uint min = (uint)(zombies_per_wave * wave_counter*0.7f);
         uint max = (uint)(zombies_per_wave * wave_counter*1.5f);
-        Debug.Log("min, max " + min + " " + max);
+        //Debug.Log("min, max " + min + " " + max);
         foreach (var s in spawner) {
             int i = 0;
             foreach (var o in s.spawn((uint)Random.Range(min, max))) {
                 wave.Add(o);
-                Debug.Log(++i);
+                //Debug.Log(++i);
             }
-            Debug.Log("----");
+            //Debug.Log("----");
         }
     }
 
     private void aFunctionBecauseLambdasDontWork()
     {
         textDescription.text = "";
-    }
-
-    private void d(float f) {
-        Debug.Log("hey " + f);
     }
 
     void waitForEndOfWave()
@@ -117,7 +113,6 @@ public class phase : MonoBehaviour
         textTimer.text = getStringTime();
 
         float f = Input.GetAxis("Interaction");
-        //Debug.Log("f is " + f);
         if (f != 0 || prepaTime <= 0)
         {
             Phase2();

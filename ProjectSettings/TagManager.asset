@@ -6,6 +6,9 @@ TagManager:
   tags:
   - UITag
   - NavigationButton
+  - zombie_spawner
+  - zombie
+  - destructible
   layers:
   - Default
   - TransparentFX
