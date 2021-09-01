@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class phase : MonoBehaviour
 {
     public scr_spawner[] spawner;
-
+    public int credits = 101;
     private uint wave_counter = 0;
     [SerializeField] private uint zombies_per_wave;
 

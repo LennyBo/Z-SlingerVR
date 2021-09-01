@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3020905446042640876}
   - component: {fileID: 3972878869055178789}
   - component: {fileID: 8637263610336412459}
-  - component: {fileID: 1711235693}
   - component: {fileID: 490366476}
   m_Layer: 0
   m_Name: BulletPrefab
@@ -114,23 +113,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!114 &1711235693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7274804591111829965}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7e94d906c4c14141b82df10a1cb95d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sendTriggerMessage: 0
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  skinWidth: 0.1
 --- !u!114 &490366476
 MonoBehaviour:
   m_ObjectHideFlags: 0
