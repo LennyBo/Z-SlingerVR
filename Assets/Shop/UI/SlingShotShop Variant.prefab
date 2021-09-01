@@ -1,5 +1,31 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &6323080647375632449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574829016088418823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c622fc6873b62554ea6bfc242e8b9c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 90
+--- !u!114 &8590784195481342822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365332796713285333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 348e82803da0d2e4891aaff8406f0c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 20
 --- !u!114 &5815182570226092162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,7 +84,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4739267911250758102, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
       propertyPath: m_Text
-      value: Multi-Shot
+      value: 'Multi-Shot
+
+        150$'
       objectReference: {fileID: 0}
     - target: {fileID: 5940742886303349012, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
       propertyPath: m_Name
@@ -174,7 +202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7416348154853254404, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
       propertyPath: m_Text
-      value: "+ D\xE9gats"
+      value: "+ D\xE9g\xE2ts\n160$"
       objectReference: {fileID: 0}
     - target: {fileID: 8290641149411683698, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
       propertyPath: m_Name
@@ -201,6 +229,16 @@ PrefabInstance:
 --- !u!1 &120715076378761461 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8290641149411683698, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
+  m_PrefabInstance: {fileID: 8260335691888358791}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &574829016088418823 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8455693543383887744, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
+  m_PrefabInstance: {fileID: 8260335691888358791}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2365332796713285333 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5940742888245773138, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
   m_PrefabInstance: {fileID: 8260335691888358791}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2365332798538402963 stripped
