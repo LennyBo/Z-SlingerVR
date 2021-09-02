@@ -23,7 +23,7 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
     private NavMeshAgent navAgent;
     private int destPoint;
 
-    static private float timeBeforeDespawn = 10f;
+    [SerializeField] private float timeBeforeDespawn = 10f;
     
     private Animator m_animator;
     private bool finisedWalking = false;
