@@ -55,6 +55,8 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
     that any physics updates such as movement should be placed within the FixedUpdate. With that in mind, add the following
     code to the FixedUpdate function
     */
+    private bool isFirstUpdate = true;
+
     void FixedUpdate()
     {
         if (finisedWalking)
@@ -79,8 +81,14 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
         */
 
         //Debug.Log("remaining distance is " + navAgent.remainingDistance);
+        
         if (!navAgent.pathPending && navAgent.remainingDistance < 1f)
-            GoToNextPoint();
+            if (isFirstUpdate)
+            {
+                // delay first movement
+                StartCoroutine(GoToNextPointFirstTime());
+            } else
+                GoToNextPoint();
     }
 
     bool isStuck()
@@ -122,6 +130,15 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
         
         currentObjective = points[destPoint++];
         navAgent.destination = currentObjective.position;
+    }
+
+    IEnumerator GoToNextPointFirstTime()
+    {
+        Debug.Log("I DONT KNOW IF THIS WORKS");
+        isFirstUpdate = false;
+        float t = Random.Range(0, 3);
+        yield return new WaitForSecondsRealtime(t);
+        GoToNextPoint();
     }
 
     private void OnCollisionEnter(Collision collision)
