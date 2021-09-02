@@ -200,7 +200,7 @@ MonoBehaviour:
   m_OnSelectExited:
     m_PersistentCalls:
       m_Calls: []
-  m_SelectActionTrigger: 1
+  m_SelectActionTrigger: 0
   m_HideControllerOnSelect: 0
   m_PlayAudioClipOnSelectEntered: 0
   m_AudioClipForOnSelectEntered: {fileID: 0}
@@ -451,13 +451,15 @@ GameObject:
   - component: {fileID: 1579817609}
   - component: {fileID: 1579817610}
   - component: {fileID: 1579817611}
+  - component: {fileID: 1335593716}
+  - component: {fileID: 1335593717}
   m_Layer: 0
   m_Name: XR Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6885970317902497906
 Transform:
   m_ObjectHideFlags: 0
@@ -582,10 +584,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 1579817610}
-  m_MoveSpeed: 1
+  m_MoveSpeed: 5
   m_EnableStrafe: 1
   m_UseGravity: 1
-  m_GravityApplicationMode: 0
+  m_GravityApplicationMode: 1
   m_ForwardSource: {fileID: 0}
   m_LeftHandMoveAction:
     m_UseReference: 1
@@ -609,6 +611,39 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
     m_Reference: {fileID: 0}
+--- !u!143 &1335593716
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6885970317902497911}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1335593717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6885970317902497911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6bf904e410ee8479f9093d8830d1f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LocomotionProvider: {fileID: 1579817611}
+  m_MinHeight: 0
+  m_MaxHeight: Infinity
 --- !u!1 &6885970318518685315
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,6 +829,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puller
       objectReference: {fileID: 0}
+    - target: {fileID: 6885970318716921986, guid: 1f04893f0b647854fa27de89db778483, type: 3}
+      propertyPath: stonePrefab
+      value: 
+      objectReference: {fileID: 7287286924837385813, guid: 35d73c0afeb7beb4aa1c8b96b4053c34, type: 3}
+    - target: {fileID: 6885970318716921986, guid: 1f04893f0b647854fa27de89db778483, type: 3}
+      propertyPath: fronts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885970318716921986, guid: 1f04893f0b647854fa27de89db778483, type: 3}
+      propertyPath: fronts.Array.data[0]
+      value: 
+      objectReference: {fileID: 652402601776507019}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f04893f0b647854fa27de89db778483, type: 3}
 --- !u!4 &4495308362080726030 stripped
@@ -925,6 +972,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 898debada935853429f9596960d84250, type: 3}
+--- !u!1 &652402601776507019 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8728832223605936523, guid: 898debada935853429f9596960d84250, type: 3}
+  m_PrefabInstance: {fileID: 8083616210264930560}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4307114416965692399 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5470527335782028015, guid: 898debada935853429f9596960d84250, type: 3}

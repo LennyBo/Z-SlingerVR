@@ -10,7 +10,7 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
     // https://www.red-gate.com/simple-talk/development/dotnet-development/pathfinding-unity-c/
 
 
-    [SerializeField] private Transform[] points;
+    private Transform[] points;
     [SerializeField] private float lp;
     [SerializeField] private int zombieDamages;
     [SerializeField] private float attackCooldown;
@@ -34,6 +34,9 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
     {
         if (phaseController == null)
             phaseController = FindObjectOfType<phase>();
+
+        points = new Transform[1];
+        points[0] = GameObject.FindGameObjectWithTag("heart").transform;
 
         navAgent = GetComponent<NavMeshAgent>();
         zombie = transform.GetChild(0);

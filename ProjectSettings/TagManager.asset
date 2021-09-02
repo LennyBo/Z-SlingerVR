@@ -10,6 +10,7 @@ TagManager:
   - zombie
   - zombie_spawner
   - HeartLP
+  - heart
   layers:
   - Default
   - TransparentFX
