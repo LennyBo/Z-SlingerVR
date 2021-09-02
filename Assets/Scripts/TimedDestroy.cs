@@ -16,7 +16,7 @@ public class TimedDestroy : MonoBehaviour
     {
         playerCollider = FindObjectOfType<CharacterController>();
         Physics.IgnoreCollision(GetComponent<Collider>(), playerCollider);
-        Destroy(gameObject,time);
+        Destroy(gameObject, time);
     }
 
     // Update is called once per frame

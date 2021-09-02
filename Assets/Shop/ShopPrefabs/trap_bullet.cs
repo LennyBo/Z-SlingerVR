@@ -51,7 +51,7 @@ public class trap_bullet : MonoBehaviour
             Vector3 a = bullets[0].transform.position;
             bullets[0].transform.Translate(new Vector3(0, 1, 0), Space.Self);
             Vector3 b = bullets[0].transform.position;
-            Debug.Log(a + " " + b);
+            //Debug.Log(a + " " + b);
             Vector3 f = (b - a).normalized;
             bullets[0].transform.position = a;
 

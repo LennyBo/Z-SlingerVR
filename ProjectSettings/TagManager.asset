@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - UITag
+  - NavigationButton
+  - BuyButton
+  - zombie
+  - zombie_spawner
+  - HeartLP
   layers:
   - Default
   - TransparentFX

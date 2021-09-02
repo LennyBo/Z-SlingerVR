@@ -87,7 +87,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points:
   - {fileID: 5086547096981480404, guid: 2ac764df2d13142459a06eea28ba9e6f, type: 3}
-  pv: 10
 --- !u!82 &-8425465610940953556
 AudioSource:
   m_ObjectHideFlags: 0
@@ -300,6 +299,9 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  lp: 10
+  zombieDamages: 1
+  attackCooldown: 2.5
 --- !u!1001 &1009688968488541816
 PrefabInstance:
   m_ObjectHideFlags: 0
