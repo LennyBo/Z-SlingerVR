@@ -39,7 +39,7 @@ public class phase : MonoBehaviour
         wave = new List<Object>();
         textHeartLF.text = maxHeartLF + "/" + maxHeartLF;
         GO_heartLF.active = false;
-        heartBoom = GO_heart.transform.FindChild("Fx_OilSplashHIGH_Root");
+        heartBoom = GO_heart.transform.Find("Fx_OilSplashHIGH_Root");
         
         StartCoroutine(Start2());
     }
@@ -98,7 +98,7 @@ public class phase : MonoBehaviour
         isPhase1 = false;
         
         textPhase.text = "Phase 2";
-        textDescription.text = "Éliminez tous les zombies !";
+        textDescription.text = "Protégez le jambon !";
         textTimer.text = "";
 
         prepaTime = PREPATIME;
