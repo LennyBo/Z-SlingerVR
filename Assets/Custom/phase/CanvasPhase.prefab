@@ -80,7 +80,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ?//?
+  m_Text: ?/?
 --- !u!114 &7965256840998224279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,7 +174,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ALERTE ZOMBIES
+  m_Text: ALERTE
 --- !u!1 &6845301904051900650
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,7 +404,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ALERTE ZOMBIES
+  m_Text: ZOMBIES
 --- !u!1 &8083374227070157795
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +483,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ALERTE ZOMBIES
+  m_Text: RESTEZ CHEZ VOUS
 --- !u!1 &8083374227169189704
 GameObject:
   m_ObjectHideFlags: 0

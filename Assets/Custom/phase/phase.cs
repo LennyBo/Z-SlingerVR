@@ -19,8 +19,9 @@ public class phase : MonoBehaviour
     [SerializeField] private Text textTimer;
     
     [SerializeField] private GameObject GO_heartLF;
-    private Text heartLF;
-    [SerializeField] private uint maxHeartLF;
+    private Text textHeartLF;
+    [SerializeField] private int maxHeartLF;
+    private int currentHeartLF;
 
     [SerializeField] private float delay;
     private bool hasStarted;
@@ -31,15 +32,17 @@ public class phase : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        heartLF = GO_heartLF.GetComponent<Text>();
+        currentHeartLF = maxHeartLF;
+        textHeartLF = GO_heartLF.GetComponent<Text>();
+        wave = new List<Object>();
+        textHeartLF.text = maxHeartLF + "/" + maxHeartLF;
+        GO_heartLF.active = false;
+        
         StartCoroutine(Start2());
     }
     
     private IEnumerator Start2()
     {
-        wave = new List<Object>();
-        heartLF.text = maxHeartLF + "/" + maxHeartLF;
-        GO_heartLF.active = false;
         yield return new WaitForSeconds(delay);
         Phase1();
         GO_heartLF.active = true;
@@ -109,6 +112,13 @@ public class phase : MonoBehaviour
             }
             //Debug.Log("----");
         }
+    }
+
+    public void hit(int damages)
+    {
+        currentHeartLF -= damages;
+        textHeartLF.text = currentHeartLF + "/" + maxHeartLF;
+
     }
 
     private void aFunctionBecauseLambdasDontWork()

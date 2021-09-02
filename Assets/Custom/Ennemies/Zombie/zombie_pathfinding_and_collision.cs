@@ -12,7 +12,6 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
 
     [SerializeField] private Transform[] points;
     [SerializeField] private float lp;
-    private Text HeartLife;
     [SerializeField] private int zombieDamages;
     [SerializeField] private float attackCooldown;
     private float attackCooldownTimer;
@@ -28,15 +27,19 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
     private Animator m_animator;
     private bool finisedWalking = false;
 
+    private static phase phaseController = null;
+
     // Start is called before the first frame update
     void Start()
     {
+        if (phaseController == null)
+            phaseController = FindObjectOfType<phase>();
+
         navAgent = GetComponent<NavMeshAgent>();
         zombie = transform.GetChild(0);
         m_animator = zombie.GetComponent<Animator>();
         oldPos = zombie.position;
 
-        HeartLife = GameObject.FindGameObjectsWithTag("HeartLP")[0].GetComponent<Text>();
         attackCooldownTimer = attackCooldown;
     }
 
@@ -157,12 +160,9 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
             return;
         }
         attackCooldownTimer = 0;
-        Debug.Log("ATTACK");
+        //Debug.Log("ATTACK");
         m_animator.SetTrigger("Attack");
-        string[] words = HeartLife.text.Split('/');
-        int lp = int.Parse(words[0]);
-        string maxLp = words[1];
-        HeartLife.text = (lp - zombieDamages) + "/" + maxLp;
+        phaseController.hit(zombieDamages);
     }
     
     // https://www.youtube.com/watch?v=FkLJ45Pt-mY
