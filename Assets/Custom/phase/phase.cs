@@ -19,6 +19,8 @@ public class phase : MonoBehaviour
     [SerializeField] private Text textTimer;
     
     [SerializeField] private GameObject GO_heartLF;
+    [SerializeField] private GameObject GO_heart;
+    private Transform heartBoom;
     private Text textHeartLF;
     [SerializeField] private int maxHeartLF;
     private int currentHeartLF;
@@ -37,6 +39,7 @@ public class phase : MonoBehaviour
         wave = new List<Object>();
         textHeartLF.text = maxHeartLF + "/" + maxHeartLF;
         GO_heartLF.active = false;
+        heartBoom = GO_heart.transform.FindChild("Fx_OilSplashHIGH_Root");
         
         StartCoroutine(Start2());
     }
@@ -118,11 +121,13 @@ public class phase : MonoBehaviour
     {
         currentHeartLF -= damages;
         textHeartLF.text = currentHeartLF + "/" + maxHeartLF;
-        if(currentHeartLF <= 0)
+        
+        heartBoom.GetComponent<ParticleSystem>().Play();
+        heartBoom.GetComponent<AudioSource>().Play();
+		if(currentHeartLF <= 0)
         {
             FindObjectOfType<LevelLoaderScript>().switchToGameOver();
         }
-
     }
 
     private void aFunctionBecauseLambdasDontWork()
