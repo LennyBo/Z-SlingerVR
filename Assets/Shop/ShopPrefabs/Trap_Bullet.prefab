@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trap: {fileID: 4669142260557268989}
-  bullet: {fileID: 7274804591111829965, guid: 87c5edc7aaa3c0945ae6fde146b43a0a, type: 3}
-  BULLET_FORCE: 100
+  bullet: {fileID: 2923400893083036913, guid: f7dec6c451f5e6240bea1fc4cbf97bd9, type: 3}
+  BULLET_FORCE: 200
   SHOOT_PER_SEC: 0.5
 --- !u!1 &8743465307035440199
 GameObject:

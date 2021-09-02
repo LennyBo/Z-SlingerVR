@@ -44,5 +44,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: []
+  credits: 101
   zombies_per_wave: 5
-  textElement: {fileID: 0}
+  textPhase: {fileID: 0}
+  textDescription: {fileID: 0}
+  textTimer: {fileID: 0}
+  heartLF: {fileID: 0}
+  maxHeartLF: 40
+  delay: 30

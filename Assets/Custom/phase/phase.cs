@@ -7,26 +7,50 @@ public class phase : MonoBehaviour
 {
     public scr_spawner[] spawner;
     public int credits = 101;
-    public int delay = 30;
     private uint wave_counter = 0;
     [SerializeField] private uint zombies_per_wave;
 
     private bool isPhase1 = false;
     private List<Object> wave;
+
+    [SerializeField] private Text textWave;
     [SerializeField] private Text textPhase;
     [SerializeField] private Text textDescription;
     [SerializeField] private Text textTimer;
+    
+    [SerializeField] private GameObject GO_heartLF;
+    private Text heartLF;
+    [SerializeField] private uint maxHeartLF;
+
+    [SerializeField] private float delay;
+    private bool hasStarted;
+
+    [SerializeField] private static float PREPATIME = 10;
+    private float prepaTime = PREPATIME;
 
     // Start is called before the first frame update
     void Start()
     {
+        heartLF = GO_heartLF.GetComponent<Text>();
+        StartCoroutine(Start2());
+    }
+    
+    private IEnumerator Start2()
+    {
         wave = new List<Object>();
+        heartLF.text = maxHeartLF + "/" + maxHeartLF;
+        GO_heartLF.active = false;
+        yield return new WaitForSeconds(delay);
         Phase1();
+        GO_heartLF.active = true;
+        hasStarted = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!hasStarted)
+            return;
         if (isPhase1)
         {
             waitForValidation();
@@ -49,13 +73,13 @@ public class phase : MonoBehaviour
         return ret;
     }
 
-    [SerializeField] private static float PREPATIME = 10;
-    private float prepaTime = PREPATIME;
+
     void Phase1()
     {
         Debug.Log("=== PHASE 1 ===");
         isPhase1 = true;
-        ++wave_counter;
+        
+        textWave.text = "Vague " + ++wave_counter;
 
         textPhase.text = "Phase 1";
         textDescription.text = "Pressez f pour valider, début dans";

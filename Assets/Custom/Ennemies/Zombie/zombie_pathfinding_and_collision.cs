@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 
 public class zombie_pathfinding_and_collision : MonoBehaviour
@@ -10,7 +11,11 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
 
 
     [SerializeField] private Transform[] points;
-    [SerializeField] private float pv;
+    [SerializeField] private float lp;
+    private Text HeartLife;
+    [SerializeField] private int zombieDamages;
+    [SerializeField] private float attackCooldown;
+    private float attackCooldownTimer;
     
     private Transform currentObjective = null;
     private Transform zombie;
@@ -18,7 +23,7 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
     private NavMeshAgent navAgent;
     private int destPoint;
 
-    static private float timeBeforeDespawn = 10f;
+    [SerializeField] private float timeBeforeDespawn = 10f;
     
     private Animator m_animator;
     private bool finisedWalking = false;
@@ -30,6 +35,9 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
         zombie = transform.GetChild(0);
         m_animator = zombie.GetComponent<Animator>();
         oldPos = zombie.position;
+
+        HeartLife = GameObject.FindGameObjectsWithTag("HeartLP")[0].GetComponent<Text>();
+        attackCooldownTimer = attackCooldown;
     }
 
     /*
@@ -58,12 +66,14 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
             m_animator.SetBool("Walking", false);
         }
 
+        /*
         if (isStuck() && !isGoalReachable() && isTargetNearestEndOfPathStructure()) {
             
         }
+        */
 
         //Debug.Log("remaining distance is " + navAgent.remainingDistance);
-        if (!navAgent.pathPending && navAgent.remainingDistance < 0.5f)
+        if (!navAgent.pathPending && navAgent.remainingDistance < 1f)
             GoToNextPoint();
     }
 
@@ -113,7 +123,7 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
         float dmg = collision.relativeVelocity.magnitude;
         //Debug.Log("hey! you hit me for " + dmg + " damages (magnitude)");
         
-        if ((pv -= dmg) <= 0)
+        if ((lp -= dmg) <= 0)
         {
             DieYouFool();
         }
@@ -121,22 +131,39 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
 
     private void IArrived()
     {
-        DieYouFool();
+        HitHeart();
+        //DieYouFool();
     }
 
     private void DieYouFool()
     {
+        finisedWalking = true;
         GetComponent<CapsuleCollider>().enabled = false;
         m_animator.SetTrigger("Death");
         GetComponent<AudioSource>().Stop();
         navAgent.Stop();
-        Debug.Log("GET DOWN");
+        //Debug.Log("GET DOWN");
         zombie.transform.position += new Vector3(0, -0.2f, 0);
         //Quaternion target = Quaternion.Euler(-10f, 0, 0);
         //zombie.transform.localRotation = Quaternion.Slerp(zombie.transform.localRotation, target, 1);
         Destroy(gameObject, timeBeforeDespawn);
     }
 
+    private void HitHeart()
+    {
+        if (attackCooldownTimer < attackCooldown)
+        {
+            attackCooldownTimer += Time.deltaTime;
+            return;
+        }
+        attackCooldownTimer = 0;
+        Debug.Log("ATTACK");
+        m_animator.SetTrigger("Attack");
+        string[] words = HeartLife.text.Split('/');
+        int lp = int.Parse(words[0]);
+        string maxLp = words[1];
+        HeartLife.text = (lp - zombieDamages) + "/" + maxLp;
+    }
     
     // https://www.youtube.com/watch?v=FkLJ45Pt-mY
     /*void Update()

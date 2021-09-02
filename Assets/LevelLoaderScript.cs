@@ -11,7 +11,7 @@ public class LevelLoaderScript : MonoBehaviour
 
     private void Start()
     {
-        this.Invoke("switchToGameOver", 5);
+        //this.Invoke("switchToGameOver", 5);
     }
     public void switchToMenu()
     {
