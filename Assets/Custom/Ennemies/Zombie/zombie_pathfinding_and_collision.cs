@@ -128,6 +128,7 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
     {
         GetComponent<CapsuleCollider>().enabled = false;
         m_animator.SetTrigger("Death");
+        GetComponent<AudioSource>().Stop();
         navAgent.Stop();
         Debug.Log("GET DOWN");
         zombie.transform.position += new Vector3(0, -0.2f, 0);
