@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class phase : MonoBehaviour
 {
+    public static uint score;
+
     public scr_spawner[] spawner;
     public int credits = 101;
     private uint wave_counter = 0;
@@ -119,6 +121,9 @@ public class phase : MonoBehaviour
 
     public void hit(int damages)
     {
+        if (currentHeartLF <= 0)
+            return;
+
         currentHeartLF -= damages;
         textHeartLF.text = currentHeartLF + "/" + maxHeartLF;
         
@@ -126,7 +131,9 @@ public class phase : MonoBehaviour
         heartBoom.GetComponent<AudioSource>().Play();
 		if(currentHeartLF <= 0)
         {
-            FindObjectOfType<LevelLoaderScript>().switchToGameOver();
+            phase.score = wave_counter;
+            FindObjectOfType<LevelLoaderScript>().switchToMenu();
+
         }
     }
 
