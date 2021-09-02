@@ -118,6 +118,10 @@ public class phase : MonoBehaviour
     {
         currentHeartLF -= damages;
         textHeartLF.text = currentHeartLF + "/" + maxHeartLF;
+        if(currentHeartLF <= 0)
+        {
+            FindObjectOfType<LevelLoaderScript>().switchToGameOver();
+        }
 
     }
 
