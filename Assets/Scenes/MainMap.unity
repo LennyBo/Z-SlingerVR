@@ -2043,6 +2043,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1061264652}
     - target: {fileID: -2023305449707099669, guid: c162cfe37890bc244a507936642c2b7e, type: 3}
+      propertyPath: zombies_per_wave
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -2023305449707099669, guid: c162cfe37890bc244a507936642c2b7e, type: 3}
       propertyPath: spawner.Array.size
       value: 5
       objectReference: {fileID: 0}

@@ -144,7 +144,7 @@ public class phase : MonoBehaviour
         int maxZombies = Random.Range(min, max);
         Debug.Log("There is between " + min + " and " + max + " zombies, and it will be " + maxZombies);
 
-        float forkForSpawn = 40/100;
+        float forkForSpawn = 40/100.0f;
         for (int i = 0; i < num; ++i) {
             var spawn = spawner[indexes[i]];
             
@@ -154,15 +154,14 @@ public class phase : MonoBehaviour
             if (num-1 == i)
                 toSpawn = approxToSpawn;
             else {
-                int minWithFork = (int)(approxToSpawn * (1-approxToSpawn));
+                int minWithFork = (int)((float)approxToSpawn * (1-forkForSpawn));
                 if (minWithFork < 0)
                     minWithFork = 0;
             
-                int maxWithFork = (int)(approxToSpawn * (1+approxToSpawn));
+                int maxWithFork = (int)((float)approxToSpawn * (1+forkForSpawn));
                 if (maxWithFork > maxZombies)
                     maxWithFork = maxZombies;
                 
-                Debug.Log("The fork is between " + minWithFork + " and " + maxWithFork);
                 toSpawn = Random.Range(minWithFork, maxWithFork);
             }
             
@@ -171,8 +170,6 @@ public class phase : MonoBehaviour
             foreach(Object o in spawn.spawn((uint)toSpawn)) {
                 wave.Add(o);
             }
-
-            Debug.Log("I spawn " + toSpawn + " zombies on " + indexes[i]);
         }
     }
 
