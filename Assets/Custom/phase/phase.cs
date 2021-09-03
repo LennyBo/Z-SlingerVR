@@ -114,6 +114,7 @@ public class phase : MonoBehaviour
         // select which spawns will actually do the spawn
 
         int num = Random.Range(1, spawner.Count + 1);
+        Debug.Log("there will be " + num + " differents spawns");
         List<int> indexes = new List<int>(num);
         /*
         while(indexes.Count != num) {
@@ -128,7 +129,7 @@ public class phase : MonoBehaviour
         // better
         List<int> range = new List<int>();
         
-        for (int i = 0; i < num; ++i)
+        for (int i = 0; i < spawner.Count; ++i)
             range.Add(i);
         
         for (int i = 0; i < num; ++i) {
