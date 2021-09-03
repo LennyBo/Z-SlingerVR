@@ -86,7 +86,8 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
             if (isFirstUpdate)
             {
                 // delay first movement
-                StartCoroutine(GoToNextPointFirstTime());
+                GoToNextPoint();
+                //StartCoroutine(GoToNextPointFirstTime());
             } else
                 GoToNextPoint();
     }

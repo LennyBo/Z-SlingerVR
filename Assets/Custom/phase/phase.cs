@@ -7,7 +7,7 @@ public class phase : MonoBehaviour
 {
     public static uint score;
 
-    public scr_spawner[] spawner;
+    public List<scr_spawner> spawner;
     public int credits = 101;
     private uint wave_counter = 0;
     [SerializeField] private uint zombies_per_wave;
@@ -106,16 +106,71 @@ public class phase : MonoBehaviour
         prepaTime = PREPATIME;
 
         this.Invoke("aFunctionBecauseLambdasDontWork", 2.5f);
-        uint min = (uint)(zombies_per_wave * wave_counter*0.7f);
-        uint max = (uint)(zombies_per_wave * wave_counter*1.5f);
-        //Debug.Log("min, max " + min + " " + max);
-        foreach (var s in spawner) {
-            int i = 0;
-            foreach (var o in s.spawn((uint)Random.Range(min, max))) {
-                wave.Add(o);
-                //Debug.Log(++i);
+        spawn();
+    }
+
+    private void spawn()
+    {
+        // select which spawns will actually do the spawn
+
+        int num = Random.Range(1, spawner.Count + 1);
+        Debug.Log("there will be " + num + " differents spawns");
+        List<int> indexes = new List<int>(num);
+        /*
+        while(indexes.Count != num) {
+            int r = Random.Range(1, spawner.Count + 1);
+            if (indexes.Contains(r))
+                continue;
+            indexes.Add(r);
+            Debug.Log("I added " + r);
+        }
+        */
+
+        // better
+        List<int> range = new List<int>();
+        
+        for (int i = 0; i < spawner.Count; ++i)
+            range.Add(i);
+        
+        for (int i = 0; i < num; ++i) {
+            int index = Random.Range(0, range.Count);
+            indexes.Add(range[index]);
+            range.RemoveAt(index);
+        }
+        
+        // 10% de jeu
+        int min = (int)((zombies_per_wave * wave_counter) * 0.9f);
+        int max = (int)((zombies_per_wave * wave_counter) * 1.1f);
+
+        int maxZombies = Random.Range(min, max);
+        Debug.Log("There is between " + min + " and " + max + " zombies, and it will be " + maxZombies);
+
+        float forkForSpawn = 40/100.0f;
+        for (int i = 0; i < num; ++i) {
+            var spawn = spawner[indexes[i]];
+            
+            int approxToSpawn = maxZombies / (num-i);
+
+            int toSpawn;
+            if (num-1 == i)
+                toSpawn = approxToSpawn;
+            else {
+                int minWithFork = (int)((float)approxToSpawn * (1-forkForSpawn));
+                if (minWithFork < 0)
+                    minWithFork = 0;
+            
+                int maxWithFork = (int)((float)approxToSpawn * (1+forkForSpawn));
+                if (maxWithFork > maxZombies)
+                    maxWithFork = maxZombies;
+                
+                toSpawn = Random.Range(minWithFork, maxWithFork);
             }
-            //Debug.Log("----");
+            
+            maxZombies -= toSpawn;
+
+            foreach(Object o in spawn.spawn((uint)toSpawn)) {
+                wave.Add(o);
+            }
         }
     }
 
