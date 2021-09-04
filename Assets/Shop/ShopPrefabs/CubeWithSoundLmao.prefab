@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1563000228}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AttachPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 975963797829052188}
   - component: {fileID: 1743065448}
   - component: {fileID: -2592161625870211342}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CubeWithSoundLmao
   m_TagString: Untagged
   m_Icon: {fileID: 0}

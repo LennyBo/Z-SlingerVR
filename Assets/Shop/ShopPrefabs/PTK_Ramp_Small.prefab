@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4313135042472238540}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AttachPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 4313135044015671800}
   - component: {fileID: 4313135044015671783}
   - component: {fileID: -7775862448175615705}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PTK_Ramp_Small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
