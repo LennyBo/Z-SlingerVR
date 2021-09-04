@@ -459,7 +459,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6885970317902497906
 Transform:
   m_ObjectHideFlags: 0
@@ -623,7 +623,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 2
-  m_Radius: 0.5
+  m_Radius: 0.25
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -781,6 +781,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6885970316725224071}
     m_Modifications:
+    - target: {fileID: 881845045592272095, guid: 1f04893f0b647854fa27de89db778483, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4162159354247164472, guid: 1f04893f0b647854fa27de89db778483, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -925,6 +929,10 @@ PrefabInstance:
     - target: {fileID: 1414282683089423372, guid: 898debada935853429f9596960d84250, type: 3}
       propertyPath: m_Name
       value: SlingShot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561736794176848268, guid: 898debada935853429f9596960d84250, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5470527335782028015, guid: 898debada935853429f9596960d84250, type: 3}
       propertyPath: m_RootOrder

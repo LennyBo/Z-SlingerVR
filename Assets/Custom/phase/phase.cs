@@ -188,7 +188,6 @@ public class phase : MonoBehaviour
         {
             phase.score = wave_counter;
             FindObjectOfType<LevelLoaderScript>().switchToGameOver();
-
         }
     }
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,7 @@ public class LevelLoaderScript : MonoBehaviour
 
     public Animator transition;
     public float delayLoad = 1f;
+    private int index;
 
     private void Start()
     {
@@ -27,6 +29,7 @@ public class LevelLoaderScript : MonoBehaviour
     {
         StartCoroutine(LoadLevel(1));
     }
+
 
     IEnumerator LoadLevel(int index)
     {
