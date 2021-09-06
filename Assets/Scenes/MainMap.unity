@@ -2318,7 +2318,7 @@ PrefabInstance:
       objectReference: {fileID: 1968297784}
     - target: {fileID: -2023305449707099669, guid: c162cfe37890bc244a507936642c2b7e, type: 3}
       propertyPath: maxHeartLF
-      value: 150
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -2023305449707099669, guid: c162cfe37890bc244a507936642c2b7e, type: 3}
       propertyPath: textDescription

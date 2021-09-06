@@ -18,7 +18,7 @@ public class LevelLoaderScript : MonoBehaviour
 
     public void switchToMenu()
     {
-        StartCoroutine(LoadLevel("Scenes/MainMenuScene"));
+        StartCoroutine(LoadLevel("Scenes/MenuScene"));
     }
 
     public void switchToMainMap()
