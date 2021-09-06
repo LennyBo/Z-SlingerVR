@@ -52,7 +52,7 @@ public class trap_bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.position = new Vector3(0.01f, 0, 0) + transform.position;
+        transform.position = new Vector3(0.01f, 0, 0) + transform.position;
         isGrabbed = Input.GetKey(KeyCode.G);
         if (isGrabbed)
             return;
@@ -63,12 +63,12 @@ public class trap_bullet : MonoBehaviour
         }
         
         // only for debug purposes
-        //transform.localPosition = relativePos;
-        //transform.localEulerAngles = relativeOr;
+        transform.localPosition = relativePos;
+        transform.localEulerAngles = relativeOr;
         
         if (shootCounter * SHOOT_PER_SEC >= 1) {
             Shoot();
-            shootCounter = 0;
+            //shootCounter = 0;
         } else {
             shootCounter += Time.deltaTime;
         }
@@ -104,21 +104,23 @@ public class trap_bullet : MonoBehaviour
 
     private void Shoot()
     {
-        GameObject[] bullets = new GameObject[4];
+        GameObject[] bullets = new GameObject[5];
 
-        float x = trap.transform.lossyScale.x / 4;
+        float x = trap.transform.lossyScale.x / 10f * 2.13f;
         float y = bullet.transform.lossyScale.y / 2 + 0.001f;
-        float z = trap.transform.lossyScale.x / 4;
+        float z = trap.transform.lossyScale.x / 10f * 2.13f;
 
         Vector3 v1 = trap.transform.TransformPoint(new Vector3(x, y, z));
         Vector3 v2 = trap.transform.TransformPoint(new Vector3(x, y, -z));
         Vector3 v3 = trap.transform.TransformPoint(new Vector3(-x, y, z));
         Vector3 v4 = trap.transform.TransformPoint(new Vector3(-x, y, -z));
+        Vector3 v5 = trap.transform.TransformPoint(new Vector3(0, y, 0));
         
         bullets[0] = Instantiate(bullet, v1, trap.transform.rotation);
         bullets[1] = Instantiate(bullet, v2, trap.transform.rotation);
         bullets[2] = Instantiate(bullet, v3, trap.transform.rotation);
         bullets[3] = Instantiate(bullet, v4, trap.transform.rotation);
+        bullets[4] = Instantiate(bullet, v5, trap.transform.rotation);
         
 
         for (int i = 0; i < bullets.Length; ++i) {
@@ -132,7 +134,7 @@ public class trap_bullet : MonoBehaviour
 
             f *= BULLET_FORCE;
             f *= BULLET_FORCE;
-            bullets[i].GetComponent<Rigidbody>().AddForce(f);
+            //bullets[i].GetComponent<Rigidbody>().AddForce(f);
         }
     }
 }
