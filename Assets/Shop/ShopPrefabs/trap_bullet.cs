@@ -36,6 +36,7 @@ public class trap_bullet : MonoBehaviour
             Vector3 scale = new Vector3(transform.lossyScale.x, y, transform.lossyScale.z);
             Gizmos.DrawWireSphere(f.position, y);
             bool b = Physics.CheckSphere(f.position, y, stickableItems);
+            DestroyImmediate(go);
             Debug.Log(b);
         }
         
