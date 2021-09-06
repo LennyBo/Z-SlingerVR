@@ -28,6 +28,8 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
     private bool finisedWalking = false;
 
     private static phase phaseController = null;
+    
+    private bool isFirstUpdate = true;
 
     // Start is called before the first frame update
     void Start()
@@ -55,9 +57,8 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
     that any physics updates such as movement should be placed within the FixedUpdate. With that in mind, add the following
     code to the FixedUpdate function
     */
-    private bool isFirstUpdate = true;
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         if (finisedWalking)
             return;
@@ -92,13 +93,13 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
                 GoToNextPoint();
     }
 
-    bool isStuck()
+    private bool isStuck()
     {
         return false;
         return navAgent.velocity.magnitude < 0.3f;
     }
 
-    bool isGoalReachable()
+    private bool isGoalReachable()
     {
         if (currentObjective == null)
             return false;
@@ -108,7 +109,7 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
         return path.status == NavMeshPathStatus.PathComplete;
     }
     
-    bool isTargetNearestEndOfPathStructure()
+    private bool isTargetNearestEndOfPathStructure()
     {
         GameObject[] structs = GameObject.FindGameObjectsWithTag("destructible");
         if (structs.Length == 0) {
@@ -118,7 +119,7 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
         return true;
     }
 
-    void GoToNextPoint()
+    private void GoToNextPoint()
     {   
         if (points.Length == 0)
             return;
@@ -133,7 +134,7 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
         navAgent.destination = currentObjective.position;
     }
 
-    IEnumerator GoToNextPointFirstTime()
+    private IEnumerator GoToNextPointFirstTime()
     {
         Debug.Log("I DONT KNOW IF THIS WORKS");
         isFirstUpdate = false;

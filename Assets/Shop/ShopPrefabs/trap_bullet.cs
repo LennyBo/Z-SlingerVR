@@ -12,9 +12,18 @@ public class trap_bullet : MonoBehaviour
     [SerializeField] private float SHOOT_PER_SEC;
 
     private bool canShoot = false;
-    // Start is called before the first frame update
-    void Start()
-    {
+    Vector3 relativePos;
+    private Vector3 relativeOr;
+
+    private bool isGrabbed = false;
+    public bool IsGrabbed {
+        get { return isGrabbed; }
+        set {
+            if (value) {
+                canShoot = false;
+            }
+            isGrabbed = value;
+        }
     }
     
     public LayerMask stickableItems;
@@ -39,40 +48,21 @@ public class trap_bullet : MonoBehaviour
         DestroyImmediate(go);
         //Debug.Log(b);
     }
-    Vector3 relativePos;
-    Vector3 relativeOr;
+
     // Update is called once per frame
     void Update()
     {
+        if (isGrabbed)
+            return;
+        
         if (!canShoot) {
-
-            float y = 0.05f;
-            GameObject go = new GameObject();
-            Transform f = go.transform;
-            f.position = transform.position;
-            f.rotation = transform.rotation;
-
-            f.Translate(new Vector3(0, -y, 0), Space.Self);
-            Vector3 scale = new Vector3(transform.lossyScale.x, y, transform.lossyScale.z);
-            Collider[] colliders = Physics.OverlapSphere(f.position, y, stickableItems);
-            Destroy(go);
-
-            if (colliders.Length >= 1) {
-
-                Transform t = colliders[0].GetComponent<Transform>();
-                transform.SetParent(t);
-                t.GetComponent<BoxCollider>().enabled = false;
-                relativePos = new Vector3(0, 0, 0);
-                relativeOr = new Vector3(90, 0, 0);
-                transform.localPosition = relativePos;
-                transform.localEulerAngles = relativeOr;
-                transform.localScale = new Vector3(1, 1, 1);
-                canShoot = true;
-            }
+            TryToPlace();
             return;
         }
-        transform.localPosition = relativePos;
-        transform.localEulerAngles = relativeOr;
+        
+        // only for debug purposes
+        //transform.localPosition = relativePos;
+        //transform.localEulerAngles = relativeOr;
         
         if (shootCounter * SHOOT_PER_SEC >= 1) {
             Shoot();
@@ -82,7 +72,33 @@ public class trap_bullet : MonoBehaviour
         }
     }
 
-    void Shoot()
+    private void TryToPlace() {
+        float y = 0.05f;
+        GameObject go = new GameObject();
+        Transform f = go.transform;
+        f.position = transform.position;
+        f.rotation = transform.rotation;
+
+        f.Translate(new Vector3(0, -y, 0), Space.Self);
+        Vector3 scale = new Vector3(transform.lossyScale.x, y, transform.lossyScale.z);
+        Collider[] colliders = Physics.OverlapSphere(f.position, y, stickableItems);
+        Destroy(go);
+
+        if (colliders.Length >= 1) {
+
+            Transform t = colliders[0].GetComponent<Transform>();
+            transform.SetParent(t);
+            t.GetComponent<BoxCollider>().enabled = false;
+            relativePos = new Vector3(0, 0, 0);
+            relativeOr = new Vector3(90, 0, 0);
+            transform.localPosition = relativePos;
+            transform.localEulerAngles = relativeOr;
+            transform.localScale = new Vector3(1, 1, 1);
+            canShoot = true;
+        }
+    }
+
+    private void Shoot()
     {
         GameObject[] bullets = new GameObject[4];
 
@@ -115,5 +131,4 @@ public class trap_bullet : MonoBehaviour
             bullets[i].GetComponent<Rigidbody>().AddForce(f);
         }
     }
-
 }
