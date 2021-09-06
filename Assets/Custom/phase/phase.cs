@@ -190,7 +190,7 @@ public class phase : MonoBehaviour
 		if(currentHeartLF <= 0)
         {
             phase.score = wave_counter;
-            FindObjectOfType<LevelLoaderScript>().switchToGameOver();
+            FindObjectOfType<LevelLoaderScript>().switchToMenu();
         }
     }
 

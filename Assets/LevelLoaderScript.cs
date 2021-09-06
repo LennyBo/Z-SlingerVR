@@ -15,23 +15,19 @@ public class LevelLoaderScript : MonoBehaviour
     {
         //this.Invoke("switchToGameOver", 5);
     }
+
     public void switchToMenu()
     {
-        StartCoroutine(LoadLevel(0));
-    }
-
-    public void switchToGameOver()
-    {
-        StartCoroutine(LoadLevel(2));
+        StartCoroutine(LoadLevel("Scenes/MainMenuScene"));
     }
 
     public void switchToMainMap()
     {
-        StartCoroutine(LoadLevel(1));
+        StartCoroutine(LoadLevel("Scenes/MainMap"));
     }
 
 
-    IEnumerator LoadLevel(int index)
+    IEnumerator LoadLevel(string index)
     {
         //Play animation
         transition.SetTrigger("Start");
