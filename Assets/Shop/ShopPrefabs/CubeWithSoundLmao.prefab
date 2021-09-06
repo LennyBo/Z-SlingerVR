@@ -344,7 +344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1970027449428135864}
   - component: {fileID: 1132650586427834779}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: faceForTrap (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -388,7 +388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8926793838945653317}
   - component: {fileID: 7171011870774084358}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: faceForTrap (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8602740643168960008}
   - component: {fileID: 2673924537620412092}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: faceForTrap (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -476,7 +476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7417029030067365526}
   - component: {fileID: 4189858255575951534}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: faceForTrap (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,7 +520,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4317676830759144835}
   - component: {fileID: 1703038374747684927}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: faceForTrap (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -564,7 +564,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5617181460388569416}
   - component: {fileID: 6255228730845312273}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: faceForTrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
