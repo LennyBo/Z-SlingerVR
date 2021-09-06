@@ -52,6 +52,8 @@ public class trap_bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //transform.position = new Vector3(0.01f, 0, 0) + transform.position;
+        isGrabbed = Input.GetKey(KeyCode.G);
         if (isGrabbed)
             return;
         
@@ -84,8 +86,10 @@ public class trap_bullet : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(f.position, y, stickableItems);
         Destroy(go);
 
+        Debug.Log("debug 1");
         if (colliders.Length >= 1) {
 
+        Debug.Log("debug 2");
             Transform t = colliders[0].GetComponent<Transform>();
             transform.SetParent(t);
             t.GetComponent<BoxCollider>().enabled = false;
