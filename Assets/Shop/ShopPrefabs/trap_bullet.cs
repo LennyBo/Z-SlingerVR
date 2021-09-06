@@ -22,6 +22,9 @@ public class trap_bullet : MonoBehaviour
             if (value) {
                 canShoot = false;
             }
+            
+            GetComponent<BoxCollider>().enabled = !value;
+
             isGrabbed = value;
         }
     }
