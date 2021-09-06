@@ -2,16 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class BuyButton : UIButton
 {
     public GameObject bloc;
-    public int price = 10;
+    [SerializeField] private int price;
+    [SerializeField] private string text;
+
     private phase phaseContoller;
+
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        Text textPrice = GetComponent<Text>();
+        textPrice.text = text + "\n" + price + " $";
         phaseContoller = FindObjectOfType<phase>();
     }
 

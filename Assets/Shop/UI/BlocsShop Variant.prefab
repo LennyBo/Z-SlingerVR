@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 404aa51d311637f48886ef546955e6db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloc: {fileID: 975963797829052191, guid: 667485f9f768cca41949562d722ce9af, type: 3}
+  bloc: {fileID: 6182973329152797382, guid: ef24a2c9ab8464646852ad9f0d7e757d, type: 3}
   price: 10
+  textPrice: {fileID: 4378762529727519113}
+  text: Brique
 --- !u!114 &5120061193353089680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26,8 +28,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 404aa51d311637f48886ef546955e6db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloc: {fileID: 4313135043383779001, guid: cddd4021b17cfce4d9e1cde49fce85fc, type: 3}
+  bloc: {fileID: 5583555510520166516, guid: 131a1003ff987254285f3ab2b3e68529, type: 3}
   price: 15
+  textPrice: {fileID: 2012289925073319259}
+  text: Rampe
 --- !u!114 &6849984289817472346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,11 +250,33 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8455693543383887744, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
   m_PrefabInstance: {fileID: 9007549294805340255}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4378762529727519113 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4739267911250758102, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
+  m_PrefabInstance: {fileID: 9007549294805340255}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3418509685850903309 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5940742888245773138, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
   m_PrefabInstance: {fileID: 9007549294805340255}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2012289925073319259 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7416348154853254404, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
+  m_PrefabInstance: {fileID: 9007549294805340255}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3418509683961063755 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5940742886303349012, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}

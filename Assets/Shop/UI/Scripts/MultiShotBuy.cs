@@ -7,12 +7,15 @@ public class MultiShotBuy : UIButton
 {
     private SlingShotScript slingScript;
 
-    public int price;
+    [SerializeField] private int price;
+    [SerializeField] private string text;
     private phase phaseContoller;
 
     // Start is called before the first frame update
     void Start()
     {
+        Text textPrice = GetComponent<Text>();
+        textPrice.text = text + "\n" + price + " $";
         slingScript = FindObjectOfType<SlingShotScript>();
         phaseContoller = FindObjectOfType<phase>();
         if (slingScript.hasUgrapdedMultiShot)

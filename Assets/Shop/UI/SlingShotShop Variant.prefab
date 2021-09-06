@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c622fc6873b62554ea6bfc242e8b9c4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 90
+  price: 150
+  textPrice: {fileID: 3704167287666654289}
+  text: Multi-Shot
 --- !u!114 &8590784195481342822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26,6 +28,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 20
+  textPrice: {fileID: 1463303541888815235}
+  text: "+ D\xE9g\xE2ts"
 --- !u!114 &5815182570226092162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,11 +240,33 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8455693543383887744, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
   m_PrefabInstance: {fileID: 8260335691888358791}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3704167287666654289 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4739267911250758102, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
+  m_PrefabInstance: {fileID: 8260335691888358791}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2365332796713285333 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5940742888245773138, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
   m_PrefabInstance: {fileID: 8260335691888358791}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1463303541888815235 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7416348154853254404, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
+  m_PrefabInstance: {fileID: 8260335691888358791}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2365332798538402963 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5940742886303349012, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}

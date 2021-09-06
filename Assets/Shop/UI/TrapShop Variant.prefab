@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &5893199915893174954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7241733319577259337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404aa51d311637f48886ef546955e6db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloc: {fileID: 4681722890801424404, guid: 3ae30f2bd3311d145819b553931c82cf, type: 3}
+  price: 250
+  text: Rocher
+--- !u!114 &4829490128791350356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4852246250749682075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404aa51d311637f48886ef546955e6db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloc: {fileID: 4669142260557268989, guid: 775223ab5557a5e4aad13e03aa2e65fb, type: 3}
+  price: 200
+  text: Tourelle murale
 --- !u!114 &6801757432730522466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,7 +88,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4739267911250758102, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
       propertyPath: m_Text
-      value: Claymore
+      value: Boulder
       objectReference: {fileID: 0}
     - target: {fileID: 5940742886303349012, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
       propertyPath: m_Name
@@ -162,7 +192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7416348154853254404, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
       propertyPath: m_Text
-      value: Tourelle
+      value: Turret
       objectReference: {fileID: 0}
     - target: {fileID: 8290641149411683698, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
       propertyPath: m_Name
@@ -170,7 +200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8455693543383887744, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
       propertyPath: m_Name
-      value: Claymore
+      value: Boulder
       objectReference: {fileID: 0}
     - target: {fileID: 8455693543383887744, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
       propertyPath: m_TagString
@@ -179,6 +209,16 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1870144851, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
+--- !u!1 &7241733319577259337 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8455693543383887744, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
+  m_PrefabInstance: {fileID: 1236069253043888841}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4852246250749682075 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5940742888245773138, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
+  m_PrefabInstance: {fileID: 1236069253043888841}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4852246250998504413 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5940742886303349012, guid: 7d0425167a12cbd40abe9c068051ce36, type: 3}
