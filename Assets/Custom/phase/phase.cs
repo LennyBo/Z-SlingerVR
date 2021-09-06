@@ -8,7 +8,8 @@ public class phase : MonoBehaviour
     public static uint score;
 
     public List<scr_spawner> spawner;
-    public int credits = 101;
+    public int credits = 50;
+    public int perPhaseBonus = 20;
     private uint wave_counter = 0;
     [SerializeField] private uint zombies_per_wave;
 
@@ -36,6 +37,7 @@ public class phase : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        credits -= perPhaseBonus;
         currentHeartLF = maxHeartLF;
         textHeartLF = GO_heartLF.GetComponent<Text>();
         wave = new List<Object>();
@@ -85,6 +87,7 @@ public class phase : MonoBehaviour
     void Phase1()
     {
         Debug.Log("=== PHASE 1 ===");
+        credits += perPhaseBonus;
         isPhase1 = true;
         
         textWave.text = "Vague " + ++wave_counter;
