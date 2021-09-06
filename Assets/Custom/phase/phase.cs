@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class phase : MonoBehaviour
 {
     public static uint score;
+    public AudioSource waveStart;
+    public AudioSource waveEnd;
 
     public List<scr_spawner> spawner;
     public int credits = 50;
@@ -87,6 +89,7 @@ public class phase : MonoBehaviour
     void Phase1()
     {
         Debug.Log("=== PHASE 1 ===");
+        waveEnd.Play();
         credits += perPhaseBonus;
         isPhase1 = true;
         
@@ -100,6 +103,7 @@ public class phase : MonoBehaviour
     void Phase2()
     {
         Debug.Log("=== PHASE 2 ===");
+        waveStart.Play();
         isPhase1 = false;
         
         textPhase.text = "Phase 2";

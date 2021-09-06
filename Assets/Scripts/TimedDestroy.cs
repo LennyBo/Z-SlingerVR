@@ -31,6 +31,6 @@ public class TimedDestroy : MonoBehaviour
             return;
 
         didHitSomething = true;
-        GetComponent<AudioSource>().Play();
+        GetComponents<AudioSource>()[0].Play();
     }
 }
