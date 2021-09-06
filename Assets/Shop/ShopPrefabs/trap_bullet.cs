@@ -68,7 +68,7 @@ public class trap_bullet : MonoBehaviour
         
         if (shootCounter * SHOOT_PER_SEC >= 1) {
             Shoot();
-            //shootCounter = 0;
+            shootCounter = 0;
         } else {
             shootCounter += Time.deltaTime;
         }
@@ -86,10 +86,8 @@ public class trap_bullet : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(f.position, y, stickableItems);
         Destroy(go);
 
-        Debug.Log("debug 1");
         if (colliders.Length >= 1) {
 
-        Debug.Log("debug 2");
             Transform t = colliders[0].GetComponent<Transform>();
             transform.SetParent(t);
             t.GetComponent<BoxCollider>().enabled = false;
@@ -123,18 +121,18 @@ public class trap_bullet : MonoBehaviour
         bullets[4] = Instantiate(bullet, v5, trap.transform.rotation);
         
 
+        // get a shoot vector
+        Vector3 a = bullets[0].transform.position;
+        bullets[0].transform.Translate(new Vector3(0, 1, 0), Space.Self);
+        Vector3 b = bullets[0].transform.position;
+        //Debug.Log(a + " " + b);
+        Vector3 f = (b - a).normalized;
+        bullets[0].transform.position = a;
+
+        f *= BULLET_FORCE * BULLET_FORCE;
+
         for (int i = 0; i < bullets.Length; ++i) {
-
-            Vector3 a = bullets[0].transform.position;
-            bullets[0].transform.Translate(new Vector3(0, 1, 0), Space.Self);
-            Vector3 b = bullets[0].transform.position;
-            //Debug.Log(a + " " + b);
-            Vector3 f = (b - a).normalized;
-            bullets[0].transform.position = a;
-
-            f *= BULLET_FORCE;
-            f *= BULLET_FORCE;
-            //bullets[i].GetComponent<Rigidbody>().AddForce(f);
+            bullets[i].GetComponent<Rigidbody>().AddForce(f);
         }
     }
 }

@@ -7,6 +7,6 @@ public class BulletTrapScript : MonoBehaviour
     [SerializeField] private float time;
     void Start()
     {
-        //Destroy(gameObject, time);
+        Destroy(gameObject, time);
     }
 }
