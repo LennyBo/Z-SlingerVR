@@ -48,6 +48,9 @@ MonoBehaviour:
   bullet: {fileID: 2923400893083036913, guid: f7dec6c451f5e6240bea1fc4cbf97bd9, type: 3}
   BULLET_FORCE: 200
   SHOOT_PER_SEC: 0.5
+  stickableItems:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!1 &8743465307035440199
 GameObject:
   m_ObjectHideFlags: 0
