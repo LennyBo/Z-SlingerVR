@@ -15,8 +15,8 @@ public class BuyButton : UIButton
 
     // Start is called before the first frame update
     void Start()
-    {   
-        Text textPrice = GetComponent<Text>();
+    {
+        Text textPrice = transform.Find("Text").GetComponent<Text>();
         phaseContoller = FindObjectOfType<phase>();
         textPrice.text = text + "\n" + price + " $";
         

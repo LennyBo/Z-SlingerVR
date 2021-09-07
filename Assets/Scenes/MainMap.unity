@@ -690,7 +690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &538223372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1335,6 +1335,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 6360495119862668465, guid: ef24a2c9ab8464646852ad9f0d7e757d, type: 3}
+      propertyPath: hoverMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f67aaca27569c7468db6d08a7ea0db9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef24a2c9ab8464646852ad9f0d7e757d, type: 3}
 --- !u!1 &1043050255
@@ -2725,6 +2729,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5583555509975297834, guid: 131a1003ff987254285f3ab2b3e68529, type: 3}
+      propertyPath: hoverMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: e6d4c557a8ca3ea46ad46453adf14c1a, type: 2}
     - target: {fileID: 5583555510520166516, guid: 131a1003ff987254285f3ab2b3e68529, type: 3}
       propertyPath: m_Name
       value: Ramp

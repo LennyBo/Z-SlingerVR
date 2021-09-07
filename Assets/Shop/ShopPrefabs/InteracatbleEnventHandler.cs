@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class InteracatbleEnventHandler : MonoBehaviour
 {
-    
+
+    private Material defaultMaterial;
+    public Material hoverMaterial;
+
+    private void Start()
+    {
+        defaultMaterial = GetComponent<Renderer>().material;
+    }
+
     public void onHoverEntered()
     {
         //Activate glow
-        GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
+        GetComponent<Renderer>().material = hoverMaterial;
     }
 
     public void onHoverExit()
     {
         //Disable glow
-        GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
+        GetComponent<Renderer>().material = defaultMaterial;
     }
 
     public void onSelectEnter()
