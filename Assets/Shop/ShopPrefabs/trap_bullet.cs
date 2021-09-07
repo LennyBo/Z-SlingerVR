@@ -59,8 +59,9 @@ public class trap_bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(0.01f, 0, 0) + transform.position;
-        isGrabbed = Input.GetKey(KeyCode.G);
+        //transform.position = new Vector3(0.01f, 0, 0) + transform.position;
+        //isGrabbed = Input.GetKey(KeyCode.G);
+        
         if (isGrabbed)
             return;
         
@@ -70,8 +71,8 @@ public class trap_bullet : MonoBehaviour
         }
         
         // only for debug purposes
-        transform.localPosition = relativePos;
-        transform.localEulerAngles = relativeOr;
+        //transform.localPosition = relativePos;
+        //transform.localEulerAngles = relativeOr;
         
         if (shootCounter * SHOOT_PER_SEC >= 1) {
             Shoot();
