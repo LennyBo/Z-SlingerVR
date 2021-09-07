@@ -9,31 +9,47 @@ public class ShopDisabler : MonoBehaviour
     /// <summary>
     /// Show/Hides the shop UI if actionreference is on/off
     /// </summary>
-    public InputActionReference actionReference;
+    public InputActionReference actionReferenceOn;
+    /// <summary>
+    /// Disables the shop ui no matter what
+    /// </summary>
+    public InputActionReference actionReferenceOverride;
     public GameObject shopUI;
 
-    private float oldTouchValue = 0;
-    // Start is called before the first frame update
-    void Start()
+    private bool _isUIOn;
+    private bool isUIOn
     {
-        
+        set
+        {
+            if (value != _isUIOn)
+            {
+                _isUIOn = value;
+                if (_isUIOn)
+                {
+                    enableUI();
+                }
+                else
+                {
+                    disableUI();
+                }
+            }
+        }
+        get
+        {
+            return _isUIOn;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        float newTouch = actionReference.action.ReadValue<float>();
-        if(newTouch != oldTouchValue)
+        if (actionReferenceOverride.action.ReadValue<float>() == 1)
         {
-            if(newTouch == 1)
-            {
-                enableUI();
-            }
-            else
-            {
-                disableUI();
-            }
-            oldTouchValue = newTouch;
+            isUIOn = false;
+        }
+        else
+        {
+            isUIOn = actionReferenceOn.action.ReadValue<float>() == 1;
         }
     }
 
