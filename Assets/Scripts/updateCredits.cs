@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class updateCredits : MonoBehaviour
 {
 
-    private phase phaseContoller;
+    private PhaseControllerScript phaseContoller;
     // Start is called before the first frame update
     void Start()
     {
-        phaseContoller = FindObjectOfType<phase>();
+        phaseContoller = FindObjectOfType<PhaseControllerScript>();
     }
 
     // Update is called once per frame

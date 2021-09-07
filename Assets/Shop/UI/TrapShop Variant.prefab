@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloc: {fileID: 4681722890801424404, guid: 3ae30f2bd3311d145819b553931c82cf, type: 3}
-  price: 250
+  price: 220
   text: Rocher
 --- !u!114 &4829490128791350356
 MonoBehaviour:
@@ -28,8 +28,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloc: {fileID: 4669142260557268989, guid: 775223ab5557a5e4aad13e03aa2e65fb, type: 3}
-  price: 200
-  text: Tourelle murale
+  price: 300
+  text: Tourelle
 --- !u!114 &6801757432730522466
 MonoBehaviour:
   m_ObjectHideFlags: 0

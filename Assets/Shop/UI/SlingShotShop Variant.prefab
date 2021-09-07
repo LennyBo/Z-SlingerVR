@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c622fc6873b62554ea6bfc242e8b9c4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 150
+  price: 500
   text: Multi-Shot
 --- !u!114 &8590784195481342822
 MonoBehaviour:
@@ -26,7 +26,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 348e82803da0d2e4891aaff8406f0c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 20
+  price: 120
   text: "+ D\xE9g\xE2ts"
 --- !u!114 &5815182570226092162
 MonoBehaviour:

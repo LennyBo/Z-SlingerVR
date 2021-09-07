@@ -27,7 +27,7 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
     private Animator m_animator;
     private bool finisedWalking = false;
 
-    private static phase phaseController = null;
+    private static PhaseControllerScript phaseController = null;
     
     private bool isFirstUpdate = true;
 
@@ -35,7 +35,7 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
     void Start()
     {
         if (phaseController == null)
-            phaseController = FindObjectOfType<phase>();
+            phaseController = FindObjectOfType<PhaseControllerScript>();
 
         points = new Transform[1];
         points[0] = GameObject.FindGameObjectWithTag("heart").transform;

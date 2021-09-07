@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class phase : MonoBehaviour
+public class PhaseControllerScript : MonoBehaviour
 {
     public static uint score;
     public AudioSource waveStart;
@@ -30,21 +30,22 @@ public class phase : MonoBehaviour
     [SerializeField] private int maxHeartLF;
     private int currentHeartLF;
 
-    [SerializeField] private float delay;
+    [SerializeField] private float delayBeforeStart;
     private bool hasStarted;
 
-    [SerializeField] private static float PREPATIME = 10;
-    private float prepaTime = PREPATIME;
+    [SerializeField] private float roundTimeOut = 10;
+    private float prepaTime;
 
     // Start is called before the first frame update
     void Start()
     {
+        prepaTime = roundTimeOut;
         credits -= perPhaseBonus;
         currentHeartLF = maxHeartLF;
         textHeartLF = GO_heartLF.GetComponent<Text>();
         wave = new List<Object>();
         textHeartLF.text = maxHeartLF + "/" + maxHeartLF;
-        GO_heartLF.active = false;
+        GO_heartLF.SetActive(false);
         heartBoom = GO_heart.transform.Find("Fx_OilSplashHIGH_Root");
         
         StartCoroutine(Start2());
@@ -52,9 +53,9 @@ public class phase : MonoBehaviour
     
     private IEnumerator Start2()
     {
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSeconds(delayBeforeStart);
         Phase1();
-        GO_heartLF.active = true;
+        GO_heartLF.SetActive(true);
         hasStarted = true;
     }
 
@@ -96,7 +97,7 @@ public class phase : MonoBehaviour
         textWave.text = "Vague " + ++wave_counter;
 
         textPhase.text = "Phase 1";
-        textDescription.text = "Pressez f pour valider, début dans";
+        textDescription.text = "Pressez le bouton pour lancer";
         textTimer.text = getStringTime();
     }
 
@@ -110,7 +111,7 @@ public class phase : MonoBehaviour
         textDescription.text = "Protégez le jambon !";
         textTimer.text = "";
 
-        prepaTime = PREPATIME;
+        prepaTime = roundTimeOut;
 
         this.Invoke("aFunctionBecauseLambdasDontWork", 2.5f);
         spawn();
@@ -193,7 +194,7 @@ public class phase : MonoBehaviour
         heartBoom.GetComponent<AudioSource>().Play();
 		if(currentHeartLF <= 0)
         {
-            phase.score = wave_counter;
+            PhaseControllerScript.score = wave_counter;
             FindObjectOfType<LevelLoaderScript>().switchToMenu();
         }
     }
@@ -226,6 +227,14 @@ public class phase : MonoBehaviour
 
         float f = Input.GetAxis("Interaction");
         if (f != 0 || prepaTime <= 0)
+        {
+            Phase2();
+        }
+    }
+
+    public void tryStartPhase2()
+    {
+        if (isPhase1)
         {
             Phase2();
         }

@@ -10,14 +10,14 @@ public class BuyButton : UIButton
     [SerializeField] private int price;
     [SerializeField] private string text;
 
-    private phase phaseContoller;
+    private PhaseControllerScript phaseContoller;
 
 
     // Start is called before the first frame update
     void Start()
     {
         Text textPrice = transform.Find("Text").GetComponent<Text>();
-        phaseContoller = FindObjectOfType<phase>();
+        phaseContoller = FindObjectOfType<PhaseControllerScript>();
         textPrice.text = text + "\n" + price + " $";
         
     }

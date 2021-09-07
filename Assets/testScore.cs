@@ -7,7 +7,7 @@ public class testScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(phase.score);
+        Debug.Log(PhaseControllerScript.score);
     }
 
     // Update is called once per frame

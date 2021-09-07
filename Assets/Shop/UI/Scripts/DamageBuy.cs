@@ -9,7 +9,7 @@ public class DamageBuy : UIButton
 
     [SerializeField] private int price;
     [SerializeField] private string text;
-    private phase phaseContoller;
+    private PhaseControllerScript phaseContoller;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class DamageBuy : UIButton
         Text textPrice = transform.Find("Text").GetComponent<Text>();
         textPrice.text = text + "\n" + price + " $";
         slingScript = FindObjectOfType<SlingShotScript>();
-        phaseContoller = FindObjectOfType<phase>();
+        phaseContoller = FindObjectOfType<PhaseControllerScript>();
         if (slingScript.hasUgrapdedDamage)
         {
             transform.Find("WhiteBackground").GetComponent<Image>().color = new Color(0, 255, 0);

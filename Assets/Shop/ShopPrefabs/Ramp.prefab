@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24d607cac1cd0b40b48acc90d054161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverMaterial: {fileID: 0}
+  hoverMaterial: {fileID: 2100000, guid: e6d4c557a8ca3ea46ad46453adf14c1a, type: 2}
 --- !u!208 &7111470861716428778
 NavMeshObstacle:
   m_ObjectHideFlags: 0

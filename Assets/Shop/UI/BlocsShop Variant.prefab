@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloc: {fileID: 6182973329152797382, guid: ef24a2c9ab8464646852ad9f0d7e757d, type: 3}
-  price: 10
+  price: 30
   text: Brique
 --- !u!114 &5120061193353089680
 MonoBehaviour:
@@ -28,7 +28,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloc: {fileID: 5583555510520166516, guid: 131a1003ff987254285f3ab2b3e68529, type: 3}
-  price: 15
+  price: 50
   text: Rampe
 --- !u!114 &6849984289817472346
 MonoBehaviour:
