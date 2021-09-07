@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4515861414347074383}
   - component: {fileID: 7088764213970576759}
+  - component: {fileID: 6948458565175680767}
   m_Layer: 11
   m_Name: faceForTrap (1)
   m_TagString: Untagged
@@ -44,6 +45,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.001}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6948458565175680767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106765941466493197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7d09594d27f3e4fb05e7821bea293e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &684490566488978532
 GameObject:
   m_ObjectHideFlags: 0
@@ -54,6 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3397428901675709393}
   - component: {fileID: 9033856570524482405}
+  - component: {fileID: 5885939967358292225}
   m_Layer: 11
   m_Name: faceForTrap (2)
   m_TagString: Untagged
@@ -88,6 +102,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.001}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5885939967358292225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684490566488978532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7d09594d27f3e4fb05e7821bea293e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1236656857281934411
 GameObject:
   m_ObjectHideFlags: 0
@@ -98,6 +124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2569113576339955612}
   - component: {fileID: 4305874250918088415}
+  - component: {fileID: 3351504651891265152}
   m_Layer: 11
   m_Name: faceForTrap (3)
   m_TagString: Untagged
@@ -132,6 +159,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.001}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3351504651891265152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236656857281934411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7d09594d27f3e4fb05e7821bea293e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3479884107659783159
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,6 +181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1563092505438645393}
   - component: {fileID: 1047665253430212808}
+  - component: {fileID: 3942756953239758688}
   m_Layer: 11
   m_Name: faceForTrap
   m_TagString: Untagged
@@ -176,6 +216,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.001}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3942756953239758688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3479884107659783159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7d09594d27f3e4fb05e7821bea293e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4361861837991368233
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,6 +238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7182815547983478874}
   - component: {fileID: 5757690478830144998}
+  - component: {fileID: 193666016844188235}
   m_Layer: 11
   m_Name: faceForTrap (5)
   m_TagString: Untagged
@@ -220,6 +273,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.001}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &193666016844188235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4361861837991368233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7d09594d27f3e4fb05e7821bea293e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5189541488223500075
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,6 +295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4833476324633789025}
   - component: {fileID: 6337408180482165826}
+  - component: {fileID: 3524106035886514869}
   m_Layer: 11
   m_Name: faceForTrap (4)
   m_TagString: Untagged
@@ -264,6 +330,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.001}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3524106035886514869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5189541488223500075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7d09594d27f3e4fb05e7821bea293e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6182973329152797382
 GameObject:
   m_ObjectHideFlags: 0

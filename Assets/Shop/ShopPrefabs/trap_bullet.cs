@@ -16,11 +16,15 @@ public class trap_bullet : MonoBehaviour
     private Vector3 relativeOr;
 
     private bool isGrabbed = false;
+
     public bool IsGrabbed {
         get { return isGrabbed; }
         set {
             if (value) {
                 canShoot = false;
+                if (transform.parent != null) {
+                    transform.parent = null;
+                }
             }
             
             GetComponent<BoxCollider>().enabled = !value;
