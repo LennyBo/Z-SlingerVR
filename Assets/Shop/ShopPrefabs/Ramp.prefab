@@ -60,7 +60,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5583555510520166516}
-  m_LocalRotation: {x: 0.50596106, y: 0.49961084, z: -0.50995535, w: 0.48408478}
+  m_LocalRotation: {x: 0.50596005, y: 0.4996122, z: -0.50995725, w: 0.4840824}
   m_LocalPosition: {x: -2.6828, y: 0.82466, z: 0.37603}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -314,6 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24d607cac1cd0b40b48acc90d054161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverMaterial: {fileID: 2100000, guid: e6d4c557a8ca3ea46ad46453adf14c1a, type: 2}
 --- !u!208 &7111470861716428778
 NavMeshObstacle:
   m_ObjectHideFlags: 0

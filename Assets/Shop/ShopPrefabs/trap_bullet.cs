@@ -15,10 +15,10 @@ public class trap_bullet : MonoBehaviour
     Vector3 relativePos;
     private Vector3 relativeOr;
 
-    private bool isGrabbed = false;
+    private bool _isGrabbed = false;
 
-    public bool IsGrabbed {
-        get { return isGrabbed; }
+    public bool isGrabbed {
+        get { return _isGrabbed; }
         set {
             if (value) {
                 canShoot = false;
@@ -29,7 +29,7 @@ public class trap_bullet : MonoBehaviour
             
             GetComponent<BoxCollider>().enabled = !value;
 
-            isGrabbed = value;
+            _isGrabbed = value;
         }
     }
     
