@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class trap_bullet : MonoBehaviour
 {
-
+    void Start() {
+        transform.parent = null;
+    }
     [SerializeField] private GameObject trap;
     [SerializeField] private GameObject bullet;
     [SerializeField] private uint BULLET_FORCE;
@@ -14,22 +16,42 @@ public class trap_bullet : MonoBehaviour
     private bool canShoot = false;
     Vector3 relativePos;
     private Vector3 relativeOr;
+    private Transform parent;
 
-    private bool isGrabbed = false;
+    private bool _isGrabbed = false;
 
-    public bool IsGrabbed {
-        get { return isGrabbed; }
+    private bool isGrabbed {
+        get { return _isGrabbed; }
         set {
             if (value) {
+                transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                 canShoot = false;
-                if (transform.parent != null) {
-                    transform.parent = null;
+            }
+
+            _isGrabbed = value;
+        }
+    }
+
+    private bool _isPlaced = false;
+    private bool isPlaced {
+        get { return _isPlaced; }
+        set {
+            if (value) {
+                transform.GetComponent<Rigidbody>().isKinematic = true;
+                if (parent != null)
+                    parent.GetComponent<Collider>().enabled = false;
+                canShoot = true;
+            } else {
+                transform.GetComponent<Rigidbody>().isKinematic = false;
+                if (parent != null) {
+                    parent.GetComponent<Collider>().enabled = true;
+                    parent = null;
                 }
+                transform.parent = null;
+                canShoot = false;
             }
             
-            GetComponent<BoxCollider>().enabled = !value;
-
-            isGrabbed = value;
+            _isPlaced = value;
         }
     }
     
@@ -95,21 +117,25 @@ public class trap_bullet : MonoBehaviour
         f.rotation = transform.rotation;
 
         f.Translate(new Vector3(0, -y, 0), Space.Self);
-        Vector3 scale = new Vector3(transform.lossyScale.x, y, transform.lossyScale.z);
+        
         Collider[] colliders = Physics.OverlapSphere(f.position, y, stickableItems);
         Destroy(go);
 
+
+        // place
+        Debug.Log("no of colliders " + colliders.Length);
         if (colliders.Length >= 1) {
 
-            Transform t = colliders[0].GetComponent<Transform>();
-            transform.SetParent(t);
-            t.GetComponent<BoxCollider>().enabled = false;
-            relativePos = new Vector3(0, 0, 0);
+            parent = colliders[0].GetComponent<Transform>();
+            transform.SetParent(parent);
+            relativePos = new Vector3(0, 0, 0.01f);
             relativeOr = new Vector3(90, 0, 0);
             transform.localPosition = relativePos;
             transform.localEulerAngles = relativeOr;
             transform.localScale = new Vector3(1, 1, 1);
-            canShoot = true;
+            isPlaced = true;
+        } else {
+            isPlaced = false;
         }
     }
 

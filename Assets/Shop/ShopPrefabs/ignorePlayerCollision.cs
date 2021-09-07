@@ -7,7 +7,7 @@ public class ignorePlayerCollision : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Physics.ignoreCollision(gameObject, FindObjectOfType<CharacterController>();
+        Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), FindObjectOfType<CharacterController>());
     }
 
     // Update is called once per frame
