@@ -17,8 +17,9 @@ public class BuyButton : UIButton
     void Start()
     {   
         Text textPrice = GetComponent<Text>();
-        textPrice.text = text + "\n" + price + " $";
         phaseContoller = FindObjectOfType<phase>();
+        textPrice.text = text + "\n" + price + " $";
+        
     }
 
     public override void pressed()

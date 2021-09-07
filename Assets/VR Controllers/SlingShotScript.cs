@@ -128,7 +128,7 @@ public class SlingShotScript : MonoBehaviour
         //lineLength = (-front.transform.position + back.transform.position).magnitude;
     }
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         if (fronts.IndexOf(other.gameObject) != -1)
         {
@@ -136,7 +136,7 @@ public class SlingShotScript : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit(Collision other)
+    private void OnTriggerExit(Collider other)
     {
         if (fronts.IndexOf(other.gameObject) != -1)
         {

@@ -14,7 +14,7 @@ public class MultiShotBuy : UIButton
     // Start is called before the first frame update
     void Start()
     {
-        Text textPrice = GetComponent<Text>();
+        Text textPrice = transform.Find("Text").GetComponent<Text>();
         textPrice.text = text + "\n" + price + " $";
         slingScript = FindObjectOfType<SlingShotScript>();
         phaseContoller = FindObjectOfType<phase>();
