@@ -16,11 +16,15 @@ public class trap_bullet : MonoBehaviour
     private Vector3 relativeOr;
 
     private bool isGrabbed = false;
+
     public bool IsGrabbed {
         get { return isGrabbed; }
         set {
             if (value) {
                 canShoot = false;
+                if (transform.parent != null) {
+                    transform.parent = null;
+                }
             }
             
             GetComponent<BoxCollider>().enabled = !value;
@@ -55,7 +59,6 @@ public class trap_bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.position = new Vector3(0.01f, 0, 0) + transform.position;
         if (isGrabbed)
             return;
         
@@ -63,7 +66,6 @@ public class trap_bullet : MonoBehaviour
             TryToPlace();
             return;
         }
-        
         if (shootCounter * SHOOT_PER_SEC >= 1) {
             Shoot();
             shootCounter = 0;
