@@ -16,6 +16,6 @@ public class updateCredits : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Find("Text").GetComponent<Text>().text = "Credits: " + phaseContoller.credits;
+        transform.Find("Text").GetComponent<Text>().text = "Crédits: " + phaseContoller.credits;
     }
 }

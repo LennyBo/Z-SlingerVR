@@ -95,13 +95,13 @@ public class PhaseControllerScript : MonoBehaviour
         Debug.Log("=== PHASE 1 ===");
         waveEnd.Play();
 
-        // 0-9 100 gold
-        // 10-20 200 gold
-        // 20-30 300 gold...
-        credits += (int)(perPhaseBonus * (1 + wave_counter % 10));
         isPhase1 = true;
         
         textWave.text = "Vague " + ++wave_counter;
+        // 0-9 100 gold
+        // 10-20 200 gold
+        // 20-30 300 gold...
+        credits += (int)(perPhaseBonus * (1 + wave_counter / 10));
 
         textPhase.text = "Phase 1";
         textDescription.text = "Pressez le bouton pour lancer";
@@ -199,7 +199,7 @@ public class PhaseControllerScript : MonoBehaviour
         
         AudioSource source = heartBoom.GetComponent<AudioSource>();
         int r = Random.Range(0, 100);
-        Debug.Log(r);
+        //Debug.Log(r);
         if (r == 0)
             source.clip = heartHit2;
         else

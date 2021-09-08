@@ -262,9 +262,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1802001427496733716, guid: 545b1d68ead09e140b8ca3884c043799, type: 3}
       propertyPath: m_Text
-      value: 'Credits: 100
-
-'
+      value: "Cr\xE9dits: 100\n"
       objectReference: {fileID: 0}
     - target: {fileID: 2418827510904217751, guid: 545b1d68ead09e140b8ca3884c043799, type: 3}
       propertyPath: m_Pivot.x

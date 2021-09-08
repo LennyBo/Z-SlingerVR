@@ -9,10 +9,14 @@ public class GameOverCanvasScript : MonoBehaviour
     void Start()
     {
         //phase.score = 1;
-        if (PhaseControllerScript.score != 0) //means a game hasn't been played yet
+        uint score = PhaseControllerScript.score;
+        if (score != 0) //0 means a game hasn't been played yet
         {
             Text t = GetComponent<Text>();
-            t.text = "Game Over\n\n Tu as survecu " + PhaseControllerScript.score + " vagues";
+            if (score == 1)
+                t.text = "Game Over\n\n Tu as survécu " + score + " vague (nullos)";
+            else
+                t.text = "Game Over\n\n Tu as survécu " + score + " vagues !";
         }   
     }
 }
