@@ -82,8 +82,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trap: {fileID: 4669142260557268989}
   bullet: {fileID: 2923400893083036913, guid: f7dec6c451f5e6240bea1fc4cbf97bd9, type: 3}
-  BULLET_FORCE: 200
-  SHOOT_PER_SEC: 0.5
+  BULLET_FORCE: 150
+  SHOOT_PER_SEC: 0.75
   stickableItems:
     serializedVersion: 2
     m_Bits: 2048

@@ -10,8 +10,8 @@ public class PhaseControllerScript : MonoBehaviour
     public AudioSource waveEnd;
 
     public List<scr_spawner> spawner;
-    public int credits = 50;
-    public int perPhaseBonus = 20;
+    public int credits;
+    public int perPhaseBonus;
     private uint wave_counter = 0;
     [SerializeField] private uint zombies_per_wave;
 
@@ -33,7 +33,7 @@ public class PhaseControllerScript : MonoBehaviour
     [SerializeField] private float delayBeforeStart;
     private bool hasStarted;
 
-    [SerializeField] private float roundTimeOut = 10;
+    [SerializeField] private float roundTimeOut;
     private float prepaTime;
 
     // Start is called before the first frame update
@@ -91,7 +91,11 @@ public class PhaseControllerScript : MonoBehaviour
     {
         Debug.Log("=== PHASE 1 ===");
         waveEnd.Play();
-        credits += perPhaseBonus;
+
+        // 0-9 100 gold
+        // 10-20 200 gold
+        // 20-30 300 gold...
+        credits += (int)(perPhaseBonus * (1 + wave_counter % 10));
         isPhase1 = true;
         
         textWave.text = "Vague " + ++wave_counter;

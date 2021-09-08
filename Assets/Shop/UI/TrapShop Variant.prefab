@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloc: {fileID: 4681722890801424404, guid: 3ae30f2bd3311d145819b553931c82cf, type: 3}
-  price: 220
+  price: 200
   text: Rocher
 --- !u!114 &4829490128791350356
 MonoBehaviour:

@@ -96,7 +96,7 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
     private bool isStuck()
     {
         return false;
-        return navAgent.velocity.magnitude < 0.3f;
+       // return navAgent.velocity.magnitude < 0.3f;
     }
 
     private bool isGoalReachable()
@@ -166,7 +166,8 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
         GetComponent<CapsuleCollider>().enabled = false;
         m_animator.SetTrigger("Death");
         GetComponent<AudioSource>().Stop();
-        navAgent.Stop();
+        navAgent.isStopped = true;
+        //navAgent.Stop();
         //Debug.Log("GET DOWN");
         zombie.transform.position += new Vector3(0, -0.2f, 0);
         //Quaternion target = Quaternion.Euler(-10f, 0, 0);
