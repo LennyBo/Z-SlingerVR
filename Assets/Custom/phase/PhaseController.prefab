@@ -47,17 +47,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a65a5c94677e824a8bc9b7f380e576d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waveStart: {fileID: 0}
+  waveEnd: {fileID: 0}
+  heartHit1: {fileID: 0}
+  heartHit2: {fileID: 8300000, guid: 18813f9409879bf40b91c37f64870e1c, type: 3}
   spawner:
   - {fileID: 5368912814684018215}
   credits: 101
+  perPhaseBonus: 0
   zombies_per_wave: 5
   textWave: {fileID: 0}
   textPhase: {fileID: 0}
   textDescription: {fileID: 0}
   textTimer: {fileID: 0}
   GO_heartLF: {fileID: 0}
+  GO_heart: {fileID: 0}
   maxHeartLF: 40
-  delay: 26
+  delayBeforeStart: 0
+  roundTimeOut: 0
 --- !u!82 &838170948
 AudioSource:
   m_ObjectHideFlags: 0

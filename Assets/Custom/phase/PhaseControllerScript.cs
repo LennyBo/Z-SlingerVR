@@ -9,6 +9,9 @@ public class PhaseControllerScript : MonoBehaviour
     public AudioSource waveStart;
     public AudioSource waveEnd;
 
+    public AudioClip heartHit1;
+    public AudioClip heartHit2;
+
     public List<scr_spawner> spawner;
     public int credits;
     public int perPhaseBonus;
@@ -194,8 +197,16 @@ public class PhaseControllerScript : MonoBehaviour
         currentHeartLF -= damages;
         textHeartLF.text = currentHeartLF + "/" + maxHeartLF;
         
+        AudioSource source = heartBoom.GetComponent<AudioSource>();
+        int r = Random.Range(0, 100);
+        Debug.Log(r);
+        if (r == 0)
+            source.clip = heartHit2;
+        else
+            source.clip = heartHit1;
+
         heartBoom.GetComponent<ParticleSystem>().Play();
-        heartBoom.GetComponent<AudioSource>().Play();
+        source.Play();
 		if(currentHeartLF <= 0)
         {
             PhaseControllerScript.score = wave_counter;

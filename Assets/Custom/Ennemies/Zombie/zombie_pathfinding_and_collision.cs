@@ -136,7 +136,7 @@ public class zombie_pathfinding_and_collision : MonoBehaviour
 
     private IEnumerator GoToNextPointFirstTime()
     {
-        Debug.Log("I DONT KNOW IF THIS WORKS");
+        //Debug.Log("I DONT KNOW IF THIS WORKS");
         isFirstUpdate = false;
         float t = Random.Range(0, 3);
         yield return new WaitForSecondsRealtime(t);
